@@ -32,7 +32,7 @@ async function main() {
     index = await res.json();
   } catch {
     const lang = applyChrome("recipes");
-    showNotFound(lang, document.getElementById("recipe-content"));
+    showNotFound(lang, document.getElementById("recipe-content"), "index");
     return;
   }
 
@@ -55,7 +55,8 @@ async function main() {
 
   const entry = findEntry(index, lang, recipeId, slugParam);
   if (!entry) {
-    showNotFound(lang, article);
+    const missing = !recipeId && !slugParam;
+    showNotFound(lang, article, missing ? "missing" : "unknown");
     return;
   }
 
@@ -114,22 +115,30 @@ function findEntry(index, lang, recipeId, slugParam) {
   const tree = index[lang];
   if (!tree?.groups) return null;
 
+  const aliases = index.slugAliases?.[lang] ?? {};
+
   if (recipeId) {
     for (const g of tree.groups) {
       const hit = g.recipes?.find((r) => r.recipeId === recipeId);
       if (hit) return hit;
     }
+    const byIdAsSlug = findByFullSlug(tree, aliases[recipeId] ?? recipeId);
+    if (byIdAsSlug) return byIdAsSlug;
   }
 
   if (slugParam) {
-    const aliases = index.slugAliases?.[lang] ?? {};
     const fullSlug = aliases[slugParam] ?? slugParam;
-    for (const g of tree.groups) {
-      const hit = g.recipes?.find((r) => r.slug === fullSlug);
-      if (hit) return hit;
-    }
+    return findByFullSlug(tree, fullSlug);
   }
 
+  return null;
+}
+
+function findByFullSlug(tree, fullSlug) {
+  for (const g of tree.groups) {
+    const hit = g.recipes?.find((r) => r.slug === fullSlug);
+    if (hit) return hit;
+  }
   return null;
 }
 
@@ -211,13 +220,20 @@ function localizeHeadings(html, lang) {
   });
 }
 
-function showNotFound(lang, article) {
+function showNotFound(lang, article, reason = "unknown") {
+  const bodyKey =
+    reason === "missing"
+      ? "notFoundMissingBody"
+      : reason === "index"
+        ? "notFoundIndexBody"
+        : "notFoundBody";
+  const body = t(lang, bodyKey);
   setDocumentMeta({
     title: `${t(lang, "notFoundTitle")}${t(lang, "metaRecipeSuffix")}`,
-    description: t(lang, "notFoundBody"),
+    description: body,
   });
   if (article) {
-    article.innerHTML = `<div class="not-found"><h2>${escapeHtml(t(lang, "notFoundTitle"))}</h2><p>${escapeHtml(t(lang, "notFoundBody"))}</p></div>`;
+    article.innerHTML = `<div class="not-found"><h2>${escapeHtml(t(lang, "notFoundTitle"))}</h2><p>${escapeHtml(body)}</p></div>`;
   }
 }
 

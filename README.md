@@ -49,13 +49,13 @@ Cross-language links use stable `recipeId` values in `scripts/recipe-ids.mjs`. S
 
 ## Local preview site
 
-```bash
-npm install
-npm run build
-npx serve site
-```
+After **`git pull`**, from the repo root:
 
-Use `?lang=da` or `?lang=en` (or the header toggle). Recipe URLs use `recipe.html?lang=da&id=<recipeId>`.
+1. **`npm install`**
+2. **`npm run build`**
+3. **`npx serve site`** — serve the **`site/`** folder, not the repo root. Do not open pages via **`file://`**.
+
+Use `?lang=da` or `?lang=en` (or the header toggle). Recipe URLs use `recipe.html?lang=da&id=<recipeId>` (stable `recipeId`; Danish short filenames also work as `id=`).
 
 Regenerate after editing Markdown or scans:
 

@@ -41,6 +41,9 @@ export const STRINGS = {
     emptyBody: "Der kommer flere, når vi har skrevet dem ind.",
     notFoundTitle: "Opskriften findes ikke",
     notFoundBody: "Prøv forsiden, eller vælg en anden opskrift.",
+    notFoundMissingBody: "Vælg en opskrift fra forsiden.",
+    notFoundIndexBody:
+      "Opskriftslisten kunne ikke indlæses. Kør `npx serve site` fra projektroden (ikke file://).",
     footerNote: "Fra Lises mormors håndskrevne notesbøger.",
     metaHomeDescription:
       "Håndskrevne opskrifter fra Lises mormor — desserter og mere.",
@@ -87,6 +90,9 @@ export const STRINGS = {
     emptyBody: "More will show up as we add them.",
     notFoundTitle: "Recipe not found",
     notFoundBody: "Try the home page, or pick another recipe.",
+    notFoundMissingBody: "Pick a recipe from the home page.",
+    notFoundIndexBody:
+      "Could not load the recipe list. Run `npx serve site` from the project root (not file://).",
     footerNote: "From Lise’s mormor’s handwritten notebooks.",
     metaHomeDescription:
       "Handwritten recipes from Lise’s mormor — desserts and more.",
