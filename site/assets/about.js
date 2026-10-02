@@ -16,6 +16,23 @@ function main() {
       .map((p) => `<p>${escapeHtml(p)}</p>`)
       .join("");
   }
+
+  const archiveEl = document.getElementById("about-archive");
+  if (archiveEl) {
+    const scan = "originals/drikkepenge-nov-feb.jpg";
+    const alt = escapeHtml(t(lang, "aboutArchiveScanAlt"));
+    const body = t(lang, "aboutArchiveBody")
+      .split("\n\n")
+      .map((p) => `<p>${escapeHtml(p)}</p>`)
+      .join("");
+    archiveEl.innerHTML = `
+      <h2 id="about-archive-heading">${escapeHtml(t(lang, "aboutArchiveHeading"))}</h2>
+      ${body}
+      <figure class="recipe-scan__figure">
+        <img src="${scan}" alt="${alt}" loading="lazy" width="800" height="1067" decoding="async" />
+      </figure>
+    `;
+  }
 }
 
 function escapeHtml(s) {

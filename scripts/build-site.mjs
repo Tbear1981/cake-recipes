@@ -16,6 +16,12 @@ const ORIGINALS_DST = path.join(SITE, "originals");
 
 const FILE_TO_ID = buildFileToId();
 
+/** Markdown kept in repo but excluded from the recipe site (see About page). */
+const NON_RECIPE_MD = new Set([
+  "en/archive/drikkepenge-nov-feb.md",
+  "da/historie/drikkepenge-nov-feb.md",
+]);
+
 /** @type {Record<string, string>} */
 const DISPLAY_TITLES = {
   "da/desserter/fromage/kaernemaelks-fromage.md": "Kærnemælksfromage",
@@ -155,7 +161,9 @@ function buildLang(lang) {
     const key = `${lang}/${relFile}`;
     const recipeId = FILE_TO_ID[key];
     if (!recipeId) {
-      console.warn(`Skip unmapped file (add to recipe-ids.mjs): ${key}`);
+      if (!NON_RECIPE_MD.has(key)) {
+        console.warn(`Skip unmapped file (add to recipe-ids.mjs): ${key}`);
+      }
       continue;
     }
     const displayTitle = DISPLAY_TITLES[key] ?? parseTitleFromMd(md);

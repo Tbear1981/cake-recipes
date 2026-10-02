@@ -32,6 +32,11 @@ export const STRINGS = {
       "Historien bag Lises mormors håndskrevne opskrifter — notesbog, udklip og den skrevne side ved siden af den indtastede.",
     aboutBody:
       "Lises mormor skrev opskrifter i hånden: i en notesbog, på løse sedler og i udklip fra aviser og blade. Noget er tydeligt, andet er rettet til undervejs — præcis som man gør i et køkken.\n\nHer ligger den indtastede opskrift ved siden af det originale. Ikke for at erstatte hendes håndskrift, men for at den stadig kan ses, mens I laver maden. Det er hendes ord og hendes måde at huske på — vi har bare gjort dem nemmere at læse.",
+    aboutArchiveHeading: "Drikkepenge (november–februar)",
+    aboutArchiveBody:
+      "En husstandsside med drikkepenge fra notesbøgerne — ikke en madopskrift.\n\nSiden viser drikkepenge mellem november og februar. Beløb og datoer står i håndskriften på scanningen.",
+    aboutArchiveScanAlt:
+      "Håndskrevet side med drikkepenge, november til februar",
     ingredientsHeading: "Ingredienser",
     methodHeading: "Fremgangsmåde",
     notesHeading: "Noter",
@@ -81,6 +86,11 @@ export const STRINGS = {
       "The story behind Lise’s mormor’s handwritten recipes — notebook, clippings, and her writing shown next to the typed page.",
     aboutBody:
       "Lise’s mormor wrote recipes by hand: in a notebook, on loose slips, and in clippings from papers and magazines. Some lines are clear; others were corrected as she went — the way a kitchen notebook grows over the years.\n\nHere the typed recipe sits beside the original page. Not to replace her handwriting, but so you can still see it while you cook. These are her words and her way of remembering — we’ve only made them easier to read at the counter.",
+    aboutArchiveHeading: "Tips ledger (November–February)",
+    aboutArchiveBody:
+      "A household tips (drikkepenge) ledger page from the notebooks — not a recipe.\n\nThis page records tip income between November and February. Amounts and dates are in the original handwriting on the scan.",
+    aboutArchiveScanAlt:
+      "Handwritten drikkepenge ledger page, November through February",
     ingredientsHeading: "Ingredients",
     methodHeading: "Method",
     notesHeading: "Notes",

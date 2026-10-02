@@ -432,6 +432,25 @@ main {
   margin: 0 0 1rem;
 }
 
+.about-archive {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.about-archive h2 {
+  font-size: 1.35rem;
+  margin: 0 0 1rem;
+}
+
+.about-archive p {
+  margin: 0 0 1rem;
+}
+
+.about-archive .recipe-scan__figure {
+  max-width: 28rem;
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 1.25rem;

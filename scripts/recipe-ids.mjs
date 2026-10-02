@@ -23,7 +23,6 @@ export const RECIPE_PAIRS = [
   { id: "cocoa-cake", en: "cakes/cocoa-cake.md", da: "kager/cacaokage.md" },
   { id: "luksus-appelsin-kage", en: "cakes/luksus-appelsin-kage.md", da: "kager/luksus-appelsin-kage.md" },
   { id: "chokoladekage", en: "cakes/chokoladekage.md", da: "kager/chokoladekage.md" },
-  { id: "drikkepenge-nov-feb", en: "archive/drikkepenge-nov-feb.md", da: "historie/drikkepenge-nov-feb.md" },
 ];
 
 /** @type {Record<string, string>} repo-root paths under originals/ */
@@ -49,10 +48,12 @@ export const SCAN_BY_ID = {
   "soda-cake": "originals/sodakage-sirups-cacaokage.jpg",
   "syrup-layer-cake": "originals/sodakage-sirups-cacaokage.jpg",
   "cocoa-cake": "originals/sodakage-sirups-cacaokage.jpg",
-  "drikkepenge-nov-feb": "originals/drikkepenge-nov-feb.jpg",
   "luksus-appelsin-kage": "originals/luksus-appelsin-kage.jpg",
   chokoladekage: "originals/chokoladekage-ugens-lille-laekkeri.jpg",
 };
+
+/** Notebook archive shown on About — not in recipe index. */
+export const ABOUT_ARCHIVE_SCAN = "originals/drikkepenge-nov-feb.jpg";
 
 /** @type {Record<string, { en: string; da: string }>} */
 export function buildRecipePairs() {

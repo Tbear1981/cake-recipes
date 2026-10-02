@@ -91,10 +91,6 @@
     "chokoladekage": {
       "en": "cakes/chokoladekage",
       "da": "kager/chokoladekage"
-    },
-    "drikkepenge-nov-feb": {
-      "en": "archive/drikkepenge-nov-feb",
-      "da": "historie/drikkepenge-nov-feb"
     }
   },
   "slugAliases": {
@@ -121,8 +117,7 @@
       "syrup-layer-cake": "cakes/syrup-layer-cake",
       "cocoa-cake": "cakes/cocoa-cake",
       "luksus-appelsin-kage": "cakes/luksus-appelsin-kage",
-      "chokoladekage": "cakes/chokoladekage",
-      "drikkepenge-nov-feb": "archive/drikkepenge-nov-feb"
+      "chokoladekage": "cakes/chokoladekage"
     },
     "da": {
       "buttermilk-fromage": "desserter/fromage/kaernemaelks-fromage",
@@ -168,26 +163,12 @@
       "cocoa-cake": "kager/cacaokage",
       "cacaokage": "kager/cacaokage",
       "luksus-appelsin-kage": "kager/luksus-appelsin-kage",
-      "chokoladekage": "kager/chokoladekage",
-      "drikkepenge-nov-feb": "historie/drikkepenge-nov-feb"
+      "chokoladekage": "kager/chokoladekage"
     }
   },
   "en": {
     "lang": "en",
     "groups": [
-      {
-        "id": "archive",
-        "categoryKey": "categoryArchive",
-        "recipes": [
-          {
-            "recipeId": "drikkepenge-nov-feb",
-            "slug": "archive/drikkepenge-nov-feb",
-            "title": "Tips ledger (November–February)",
-            "scan": "originals/drikkepenge-nov-feb.jpg",
-            "contentPath": "content/en/archive/drikkepenge-nov-feb.json"
-          }
-        ]
-      },
       {
         "id": "cakes",
         "categoryKey": "categoryCakes",
@@ -420,19 +401,6 @@
   "da": {
     "lang": "da",
     "groups": [
-      {
-        "id": "archive",
-        "categoryKey": "categoryArchive",
-        "recipes": [
-          {
-            "recipeId": "drikkepenge-nov-feb",
-            "slug": "historie/drikkepenge-nov-feb",
-            "title": "Drikkepenge (november–februar)",
-            "scan": "originals/drikkepenge-nov-feb.jpg",
-            "contentPath": "content/da/historie/drikkepenge-nov-feb.json"
-          }
-        ]
-      },
       {
         "id": "cakes",
         "categoryKey": "categoryCakes",
