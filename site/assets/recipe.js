@@ -82,21 +82,32 @@ async function main() {
     description: data.metaDescription || t(lang, "tagline"),
   });
 
-  const scanBlock = renderScan(lang, data.scan);
+  const scanBlock = renderScanBlock(
+    lang,
+    index,
+    data.scan,
+    data.recipeId,
+    data.title
+  );
 
   article.innerHTML = `
     <article class="recipe-article">
       <h1>${escapeHtml(data.title)}</h1>
       <p class="recipe-meta">${escapeHtml(catLabel)}</p>
       <div class="recipe-layout">
+        <div class="recipe-body">${localizeHeadings(data.html, lang)}</div>
         <aside class="recipe-scan" aria-labelledby="scan-heading">
           <h2 id="scan-heading" class="recipe-scan__title">${escapeHtml(t(lang, "scanHeading"))}</h2>
           ${scanBlock}
         </aside>
-        <div class="recipe-body">${localizeHeadings(data.html, lang)}</div>
       </div>
     </article>
   `;
+
+  const disclosure = article.querySelector(".recipe-scan__disclosure");
+  if (disclosure && window.matchMedia("(min-width: 768px)").matches) {
+    disclosure.open = true;
+  }
 }
 
 function findEntry(index, lang, recipeId, slugParam) {
@@ -122,12 +133,73 @@ function findEntry(index, lang, recipeId, slugParam) {
   return null;
 }
 
-function renderScan(lang, scan) {
-  if (scan) {
-    const src = escapeHtml(scan);
-    return `<figure class="recipe-scan__figure"><img src="${src}" alt="" loading="lazy" width="800" height="1067" /></figure>`;
+function siblingTitlesOnScan(index, lang, scan, recipeId) {
+  if (!scan) return [];
+  const titles = [];
+  for (const g of index[lang]?.groups ?? []) {
+    for (const r of g.recipes ?? []) {
+      if (r.scan === scan && r.recipeId !== recipeId) {
+        titles.push(r.title);
+      }
+    }
   }
-  return `<div class="recipe-scan__placeholder" role="img" aria-label="${escapeHtml(t(lang, "scanPlaceholder"))}"><p>${escapeHtml(t(lang, "scanPlaceholder"))}</p></div>`;
+  return titles.sort((a, b) => a.localeCompare(b));
+}
+
+function formatSharedCaption(lang, names) {
+  if (!names.length) return "";
+  const copy = [...names];
+  if (lang === "da") {
+    if (copy.length === 1) return `Samme notesbogsside som ${copy[0]}.`;
+    if (copy.length === 2) return `Samme notesbogsside som ${copy[0]} og ${copy[1]}.`;
+    const last = copy.pop();
+    return `Samme notesbogsside som ${copy.join(", ")} og ${last}.`;
+  }
+  if (copy.length === 1) return `Same notebook page as ${copy[0]}.`;
+  if (copy.length === 2) return `Same notebook page as ${copy[0]} and ${copy[1]}.`;
+  const last = copy.pop();
+  return `Same notebook page as ${copy.join(", ")} and ${last}.`;
+}
+
+function buildScanAlt(lang, title, siblingTitles) {
+  const base =
+    lang === "da"
+      ? `Håndskrevet side: ${title}`
+      : `Handwritten page: ${title}`;
+  if (!siblingTitles.length) return base;
+  const also =
+    lang === "da"
+      ? ` — notesiden viser også ${siblingTitles.join(", ")}`
+      : ` — page also shows ${siblingTitles.join(", ")}`;
+  return base + also;
+}
+
+function renderScanBlock(lang, index, scan, recipeId, title) {
+  if (!scan) {
+    return `<div class="recipe-scan__placeholder" role="img" aria-label="${escapeHtml(t(lang, "scanPlaceholder"))}"><p>${escapeHtml(t(lang, "scanPlaceholder"))}</p></div>`;
+  }
+
+  const src = escapeHtml(scan);
+  const siblings = siblingTitlesOnScan(index, lang, scan, recipeId);
+  const alt = escapeHtml(buildScanAlt(lang, title, siblings));
+  const caption = siblings.length
+    ? `<p class="recipe-scan__shared">${escapeHtml(formatSharedCaption(lang, siblings))}</p>`
+    : "";
+
+  return `
+    <details class="recipe-scan__disclosure">
+      <summary class="recipe-scan__summary">
+        <img class="recipe-scan__thumb" src="${src}" alt="" width="120" height="160" loading="lazy" decoding="async" />
+        <span class="recipe-scan__summary-label">${escapeHtml(t(lang, "scanDisclosure"))}</span>
+      </summary>
+      <div class="recipe-scan__panel">
+        ${caption}
+        <figure class="recipe-scan__figure">
+          <img src="${src}" alt="${alt}" loading="lazy" width="800" height="1067" decoding="async" />
+        </figure>
+      </div>
+    </details>
+  `;
 }
 
 function localizeHeadings(html, lang) {

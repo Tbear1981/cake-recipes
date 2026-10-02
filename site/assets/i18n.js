@@ -24,7 +24,8 @@ export const STRINGS = {
     categoryColdStarters: "Kolde forretter",
     categoryPreserves: "Syltetøj",
     categoryArchive: "Historie",
-    scanHeading: "Original",
+    scanHeading: "Håndskrift",
+    scanDisclosure: "Se håndskrift",
     scanPlaceholder: "Scan kommer",
     aboutTitle: "Om opskrifterne",
     aboutMetaDescription:
@@ -69,7 +70,8 @@ export const STRINGS = {
     categoryColdStarters: "Cold starters",
     categoryPreserves: "Preserves",
     categoryArchive: "History",
-    scanHeading: "Original",
+    scanHeading: "Handwriting",
+    scanDisclosure: "See handwriting",
     scanPlaceholder: "Scan coming",
     aboutTitle: "About the recipes",
     aboutMetaDescription:
