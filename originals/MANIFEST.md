@@ -3,7 +3,7 @@
 Folder: `/workspace/lises-mormor-originals/`
 
 ## Named copies (prefer these)
-- `(pending)` `bog-forside.jpg` — Notebook cover/title page (About page; add to `originals/` when Maggio supplies scan)
+- `bog-forside.jpg` — Notebook cover/title page (About page)
 - `drikkepenge-nov-feb.jpg` — Drikkepenge ledger (archive)
 - `luksus-appelsin-kage.jpg` — Luksus-appelsin-kage clip
 - `chokoladekage-ugens-lille-laekkeri.jpg` — Chokoladekage clip
