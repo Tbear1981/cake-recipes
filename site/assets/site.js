@@ -35,16 +35,16 @@ export function applyChrome(activeNav) {
   if (footerNoteEl) footerNoteEl.textContent = t(lang, "footerNote");
 
   const brandLink = document.querySelector(".brand__title a");
-  if (brandLink) brandLink.href = withLang("/index", lang);
+  if (brandLink) brandLink.href = withLang("/", lang);
 
   if (navHome) {
     navHome.textContent = t(lang, "navHome");
-    navHome.href = withLang("/index", lang);
+    navHome.href = withLang("/", lang);
     navHome.setAttribute("aria-current", activeNav === "home" ? "page" : "false");
   }
   if (navRecipes) {
     navRecipes.textContent = t(lang, "navRecipes");
-    navRecipes.href = withLang("/index#recipes", lang);
+    navRecipes.href = withLang("/#recipes", lang);
     navRecipes.setAttribute(
       "aria-current",
       activeNav === "recipes" ? "page" : "false"

@@ -46,7 +46,7 @@ async function main() {
   const back = document.querySelector("[data-back]");
   if (back) {
     back.textContent = t(lang, "backToList");
-    back.href = withLang("/index#recipes", lang);
+    back.href = withLang("/#recipes", lang);
   }
 
   const article = document.getElementById("recipe-content");
