@@ -63,6 +63,10 @@ export const STRINGS = {
     metaHomeDescription:
       "Håndskrevne opskrifter fra Lises mormor — desserter og mere.",
     metaRecipeSuffix: " — Lises mormors opskrifter",
+    contributeInvite:
+      "Har du gamle opskrifter fra din mormor eller bedstemor — og ved du, hvor hun kom fra? Send dem gerne. Vi vil gerne udvide samlingen til flere kulturer, ikke kun det danske køkken.",
+    contributeMailLabel: "Skriv til tbj@bona.city",
+    contributeMailSubject: "Opskrifter til Lises mormor",
   },
   en: {
     siteTitle: "Lise’s mormor’s recipes",
@@ -127,6 +131,10 @@ export const STRINGS = {
     metaHomeDescription:
       "Handwritten recipes from Lise’s mormor — desserts and more.",
     metaRecipeSuffix: " — Lise’s mormor’s recipes",
+    contributeInvite:
+      "Do you have old recipes from your grandmother — and do you know where she was from? Send them along. We’d like to grow the collection across cultures, not only Danish kitchens.",
+    contributeMailLabel: "Write to tbj@bona.city",
+    contributeMailSubject: "Recipes for Lise’s mormor",
   },
   ar: {
     siteTitle: "وصفات مورمور ليزه",
@@ -187,6 +195,10 @@ export const STRINGS = {
     footerNote: "من دفاتر مورمور ليزه المكتوبة بخط اليد.",
     metaHomeDescription: "وصفات مكتوبة بخط اليد من مورمور ليزه — حلويات والمزيد.",
     metaRecipeSuffix: " — وصفات مورمور ليزه",
+    contributeInvite:
+      "هل لديك وصفات قديمة من جدّتك — وهل تعرف من أين جاءت؟ أرسلها إلينا. نودّ توسيع المجموعة لثقافات أخرى، لا المطبخ الدنماركي وحده.",
+    contributeMailLabel: "راسل tbj@bona.city",
+    contributeMailSubject: "وصفات لمورمور ليزه",
     arFallbackNotice:
       "هذه الوصفة معروضة بالدنماركية إلى أن تتوفر ترجمة عربية. النص الدنماركي هو الأصل من دفتر مورمور ليزه.",
     arFallbackLabel: "بالعربية قريبًا — النص الدنماركي أدناه",

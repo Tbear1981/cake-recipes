@@ -1,11 +1,14 @@
 import { applyChrome, setDocumentMeta, categoryLabel, t, withLang } from "./site.js";
 
+const CONTRIBUTE_MAIL = "tbj@bona.city";
+
 async function main() {
   const lang = applyChrome("home");
   setDocumentMeta({
     title: t(lang, "siteTitle"),
     description: t(lang, "metaHomeDescription"),
   });
+  renderContributeStrip(lang);
 
   const container = document.getElementById("recipe-groups");
   if (!container) return;
@@ -44,6 +47,20 @@ async function main() {
   }
 
   container.innerHTML = parts.join("");
+}
+
+function renderContributeStrip(lang) {
+  const strip = document.getElementById("contribute-strip");
+  if (!strip) return;
+
+  const inviteEl = strip.querySelector("[data-contribute-invite]");
+  const mailEl = strip.querySelector("[data-contribute-mail]");
+  if (inviteEl) inviteEl.textContent = t(lang, "contributeInvite");
+  if (mailEl) {
+    mailEl.textContent = t(lang, "contributeMailLabel");
+    const subject = encodeURIComponent(t(lang, "contributeMailSubject"));
+    mailEl.href = `mailto:${CONTRIBUTE_MAIL}?subject=${subject}`;
+  }
 }
 
 function siblingCountOnScan(index, lang, scan, recipeId) {

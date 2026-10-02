@@ -179,6 +179,36 @@ main {
   margin: 0 auto;
 }
 
+.contribute-strip {
+  margin: 0 0 1.75rem;
+  padding: 1rem 1.1rem;
+  background: var(--paper-elevated);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 2px rgba(42, 35, 24, 0.04);
+}
+
+.contribute-strip__invite {
+  margin: 0 0 0.65rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.contribute-strip__mail {
+  margin: 0;
+  font-size: 0.95rem;
+  font-family: var(--font-ui);
+}
+
+.contribute-strip__mailto {
+  font-weight: 500;
+}
+
+html[dir="rtl"] .contribute-strip__mailto {
+  unicode-bidi: isolate;
+}
+
 .home-intro {
   max-width: none;
   margin-bottom: 2rem;
