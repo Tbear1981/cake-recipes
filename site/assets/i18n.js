@@ -32,15 +32,16 @@ export const STRINGS = {
       "Historien bag Lises mormors håndskrevne opskrifter — notesbog, udklip og den skrevne side ved siden af den indtastede.",
     aboutBody:
       "Lises mormor skrev opskrifter i hånden: i en notesbog, på løse sedler og i udklip fra aviser og blade. Noget er tydeligt, andet er rettet til undervejs — præcis som man gør i et køkken.\n\nHer ligger den indtastede opskrift ved siden af det originale. Ikke for at erstatte hendes håndskrift, men for at den stadig kan ses, mens I laver maden. Det er hendes ord og hendes måde at huske på — vi har bare gjort dem nemmere at læse.",
-    aboutCoverHeading: "Notesbog — forside",
-    aboutCoverBody:
-      "Forsiden eller titelbladet på Lises mormors notesbog med opskrifter — ikke en opskrift, men selve bogen.",
-    aboutCoverScanAlt: "Håndskrevet forside eller titelblad på notesbogen",
-    aboutArchiveHeading: "Drikkepenge (november–februar)",
-    aboutArchiveBody:
-      "En husstandsside med drikkepenge fra notesbøgerne — ikke en madopskrift.\n\nSiden viser drikkepenge mellem november og februar. Beløb og datoer står i håndskriften på scanningen.",
-    aboutArchiveScanAlt:
-      "Håndskrevet side med drikkepenge, november til februar",
+    aboutBookDisclosure: "Se bogens forside",
+    aboutCoverCaption: "Forsiden af notesbogen.",
+    aboutCoverScanAlt: "Forside af Lises mormors opskriftsbog",
+    aboutLedgerTitle: "Drikkepenge",
+    aboutLedgerBridge:
+      "I samme notesbøger ligger også sider, der ikke er opskrifter. Drikkepenge er et husstandsopslag — en del af arkivet, ikke noget man laver mad efter.",
+    aboutLedgerDisclosure: "Se drikkepenge-siden",
+    aboutLedgerCaption: "Husstandsside — ikke en opskrift.",
+    aboutLedgerScanAlt: "Håndskrevet drikkepengeside, november–februar",
+    aboutBackToRecipes: "Tilbage til opskrifterne",
     ingredientsHeading: "Ingredienser",
     methodHeading: "Fremgangsmåde",
     notesHeading: "Noter",
@@ -90,15 +91,16 @@ export const STRINGS = {
       "The story behind Lise’s mormor’s handwritten recipes — notebook, clippings, and her writing shown next to the typed page.",
     aboutBody:
       "Lise’s mormor wrote recipes by hand: in a notebook, on loose slips, and in clippings from papers and magazines. Some lines are clear; others were corrected as she went — the way a kitchen notebook grows over the years.\n\nHere the typed recipe sits beside the original page. Not to replace her handwriting, but so you can still see it while you cook. These are her words and her way of remembering — we’ve only made them easier to read at the counter.",
-    aboutCoverHeading: "Notebook — title page",
-    aboutCoverBody:
-      "The cover or title page of Lise’s mormor’s recipe notebook — not a recipe, but the book itself.",
-    aboutCoverScanAlt: "Handwritten cover or title page of the recipe notebook",
-    aboutArchiveHeading: "Tips ledger (November–February)",
-    aboutArchiveBody:
-      "A household tips (drikkepenge) ledger page from the notebooks — not a recipe.\n\nThis page records tip income between November and February. Amounts and dates are in the original handwriting on the scan.",
-    aboutArchiveScanAlt:
-      "Handwritten drikkepenge ledger page, November through February",
+    aboutBookDisclosure: "See the book cover",
+    aboutCoverCaption: "The front of the notebook.",
+    aboutCoverScanAlt: "Front cover of Lise’s mormor’s recipe book",
+    aboutLedgerTitle: "Tips ledger",
+    aboutLedgerBridge:
+      "The same notebooks also hold pages that aren’t recipes. This tips ledger is a household page — part of the archive, not something you cook from.",
+    aboutLedgerDisclosure: "See the tips ledger",
+    aboutLedgerCaption: "A household page — not a recipe.",
+    aboutLedgerScanAlt: "Handwritten tips ledger, November–February",
+    aboutBackToRecipes: "Back to the recipes",
     ingredientsHeading: "Ingredients",
     methodHeading: "Method",
     notesHeading: "Notes",

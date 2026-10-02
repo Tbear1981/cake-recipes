@@ -2,6 +2,7 @@ import {
   applyChrome,
   setDocumentMeta,
   categoryLabel,
+  getLang,
   setLangSwitchContext,
   t,
   withLang,
@@ -22,8 +23,22 @@ const HEADING_MAP = {
   },
 };
 
+const ABOUT_LEDGER_RECIPE_ID = "drikkepenge-nov-feb";
+
 async function main() {
   const params = new URLSearchParams(window.location.search);
+
+  const recipeIdParam = params.get("id");
+  const slugParam = params.get("slug");
+  if (
+    recipeIdParam === ABOUT_LEDGER_RECIPE_ID ||
+    slugParam === ABOUT_LEDGER_RECIPE_ID ||
+    (slugParam && slugParam.includes("drikkepenge"))
+  ) {
+    const lang = getLang();
+    window.location.replace(`${withLang("/about", lang)}#drikkepenge`);
+    return;
+  }
 
   let index;
   try {
@@ -50,8 +65,7 @@ async function main() {
   }
 
   const article = document.getElementById("recipe-content");
-  const recipeId = params.get("id");
-  const slugParam = params.get("slug");
+  const recipeId = recipeIdParam;
 
   const entry = findEntry(index, lang, recipeId, slugParam);
   if (!entry) {

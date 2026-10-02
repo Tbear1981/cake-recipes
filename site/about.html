@@ -34,9 +34,19 @@
     <main>
       <div class="main-inner">
         <article class="about-page">
-          <h1 id="about-title"></h1>
-          <div id="about-body" class="about-body"></div>
-          <div id="about-archive" class="about-archive-list"></div>
+          <div class="about-hero">
+            <div class="about-story">
+              <h1 id="about-title"></h1>
+              <div id="about-body" class="about-body"></div>
+            </div>
+            <div id="about-cover-mount" class="about-cover" hidden></div>
+          </div>
+          <section id="drikkepenge" class="about-ledger" aria-labelledby="about-ledger-heading">
+            <div id="about-ledger"></div>
+          </section>
+          <p class="about-exit">
+            <a id="about-back" class="about-exit__link" href="/#recipes"></a>
+          </p>
         </article>
       </div>
     </main>
