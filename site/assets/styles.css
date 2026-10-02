@@ -432,10 +432,22 @@ main {
   margin: 0 0 1rem;
 }
 
-.about-archive {
+.about-archive-list {
   margin-top: 2rem;
+}
+
+.about-archive {
+  margin-top: 0;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border);
+}
+
+.about-archive-list .about-archive:first-child {
+  padding-top: 1.5rem;
+}
+
+.about-archive-list .about-archive + .about-archive {
+  margin-top: 2rem;
 }
 
 .about-archive h2 {

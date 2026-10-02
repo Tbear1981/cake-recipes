@@ -53,6 +53,7 @@ export const SCAN_BY_ID = {
 };
 
 /** Notebook archive shown on About — not in recipe index. */
+export const ABOUT_COVER_SCAN = "originals/bog-forside.jpg";
 export const ABOUT_ARCHIVE_SCAN = "originals/drikkepenge-nov-feb.jpg";
 
 /** @type {Record<string, { en: string; da: string }>} */

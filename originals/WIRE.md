@@ -1,4 +1,5 @@
 Wire scan on each recipe/archive to originals/<file> (shared scans OK for multi-recipe pages):
+About page (not recipes): bog-forside.jpg when available; drikkepenge-nov-feb.jpg on About + ledger note
 - buttermilk-fromage + alexandra-pudding → fromage-alexandra-budding.jpg
 - italiensk-salat + sildesalat → italiensk-salat-sildesalat.jpg
 - aeggehvidekager + lagkage + marcipankage → aeggehvidekager-lagkage-marcipankage.jpg
