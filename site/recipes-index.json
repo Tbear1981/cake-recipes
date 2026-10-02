@@ -1,0 +1,56 @@
+{
+  "en": {
+    "lang": "en",
+    "groups": [
+      {
+        "id": "fromage",
+        "categoryKey": "categoryFromage",
+        "recipes": [
+          {
+            "slug": "desserts/fromage/buttermilk-fromage",
+            "title": "Buttermilk fromage",
+            "contentPath": "content/en/desserts/fromage/buttermilk-fromage.json"
+          }
+        ]
+      },
+      {
+        "id": "pudding",
+        "categoryKey": "categoryPudding",
+        "recipes": [
+          {
+            "slug": "desserts/pudding/alexandra-pudding",
+            "title": "Alexandra pudding",
+            "contentPath": "content/en/desserts/pudding/alexandra-pudding.json"
+          }
+        ]
+      }
+    ]
+  },
+  "da": {
+    "lang": "da",
+    "groups": [
+      {
+        "id": "budding",
+        "categoryKey": "categoryPudding",
+        "recipes": [
+          {
+            "slug": "desserter/budding/alexandra-budding",
+            "title": "Alexandra budding",
+            "contentPath": "content/da/desserter/budding/alexandra-budding.json"
+          }
+        ]
+      },
+      {
+        "id": "fromage",
+        "categoryKey": "categoryFromage",
+        "recipes": [
+          {
+            "slug": "desserter/fromage/kaernemaelks-fromage",
+            "title": "Kærnemælksfromage",
+            "contentPath": "content/da/desserter/fromage/kaernemaelks-fromage.json"
+          }
+        ]
+      }
+    ]
+  }
+}

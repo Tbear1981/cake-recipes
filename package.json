@@ -1,0 +1,11 @@
+{
+  "name": "cake-recipes",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build-site.mjs"
+  },
+  "devDependencies": {
+    "marked": "^15.0.6"
+  }
+}

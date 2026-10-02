@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <title>Lise’s mormor’s recipes</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="brand">
+          <h1 class="brand__title">
+            <a href="index.html"><span data-site-title></span></a>
+          </h1>
+          <p class="brand__tagline" data-tagline></p>
+          <p class="source-line" data-source></p>
+        </div>
+        <nav aria-label="Main">
+          <ul>
+            <li><a data-nav-home href="index.html"></a></li>
+            <li><a data-nav-recipes href="index.html#recipes"></a></li>
+            <li>
+              <div class="lang-switch" role="group">
+                <a data-lang-da href="index.html?lang=da"></a>
+                <a data-lang-en href="index.html?lang=en"></a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="main-inner">
+        <section class="home-intro" aria-labelledby="recipes-heading">
+          <h2 id="recipes-heading" class="visually-hidden">Recipes</h2>
+          <div id="recipe-groups"></div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <p data-footer-note></p>
+      <p><span data-source></span></p>
+    </footer>
+    <script type="module" src="assets/index.js"></script>
+  </body>
+</html>
