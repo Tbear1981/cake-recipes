@@ -35,16 +35,16 @@ export function applyChrome(activeNav) {
   if (footerNoteEl) footerNoteEl.textContent = t(lang, "footerNote");
 
   const brandLink = document.querySelector(".brand__title a");
-  if (brandLink) brandLink.href = withLang("/index.html", lang);
+  if (brandLink) brandLink.href = withLang("/index", lang);
 
   if (navHome) {
     navHome.textContent = t(lang, "navHome");
-    navHome.href = withLang("/index.html", lang);
+    navHome.href = withLang("/index", lang);
     navHome.setAttribute("aria-current", activeNav === "home" ? "page" : "false");
   }
   if (navRecipes) {
     navRecipes.textContent = t(lang, "navRecipes");
-    navRecipes.href = withLang("/index.html#recipes", lang);
+    navRecipes.href = withLang("/index#recipes", lang);
     navRecipes.setAttribute(
       "aria-current",
       activeNav === "recipes" ? "page" : "false"
@@ -52,7 +52,7 @@ export function applyChrome(activeNav) {
   }
   if (navAbout) {
     navAbout.textContent = t(lang, "navAbout");
-    navAbout.href = withLang("/about.html", lang);
+    navAbout.href = withLang("/about", lang);
     navAbout.setAttribute(
       "aria-current",
       activeNav === "about" ? "page" : "false"

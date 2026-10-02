@@ -32,7 +32,7 @@ async function main() {
     const heading = categoryLabel(lang, group.categoryKey);
     const items = group.recipes
       .map((r) => {
-        const href = `recipe.html?lang=${encodeURIComponent(lang)}&id=${encodeURIComponent(r.recipeId)}`;
+        const href = `recipe?lang=${encodeURIComponent(lang)}&id=${encodeURIComponent(r.recipeId)}`;
         return `<li><a href="${href}">${escapeHtml(r.title)}</a></li>`;
       })
       .join("");

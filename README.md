@@ -55,7 +55,7 @@ After **`git pull`**, from the repo root:
 2. **`npm run build`**
 3. **`npx serve site`** — serve the **`site/`** folder, not the repo root. Do not open pages via **`file://`**.
 
-Use `?lang=da` or `?lang=en` (or the header toggle). Recipe URLs use `recipe.html?lang=da&id=<recipeId>` (stable `recipeId`; Danish short filenames also work as `id=`).
+Use `?lang=da` or `?lang=en` (or the header toggle). In-app links use extensionless paths such as `recipe?lang=da&id=<recipeId>` (stable `recipeId`; Danish short filenames also work as `id=`) — not `*.html?…`, because `npx serve site` enables cleanUrls and its `.html` → clean URL redirect drops the query string.
 
 Regenerate after editing Markdown or scans:
 

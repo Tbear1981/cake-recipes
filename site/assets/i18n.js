@@ -127,5 +127,5 @@ export function otherLang(lang) {
 export function withLang(href, lang) {
   const url = new URL(href, window.location.origin);
   url.searchParams.set("lang", lang);
-  return url.pathname + url.search;
+  return url.pathname + url.search + url.hash;
 }
