@@ -21,6 +21,11 @@ const HEADING_MAP = {
     Noter: "notesHeading",
     Transkriptionsnote: "transcriptionNoteHeading",
   },
+  ar: {
+    المكونات: "ingredientsHeading",
+    الطريقة: "methodHeading",
+    ملاحظات: "notesHeading",
+  },
 };
 
 const ABOUT_LEDGER_RECIPE_ID = "drikkepenge-nov-feb";
@@ -81,18 +86,45 @@ async function main() {
   });
   applyChrome("recipes");
 
-  const arNativeBody =
-    lang === "ar" && entry.contentPath?.startsWith("content/ar/");
-  const showArFallback = lang === "ar" && !arNativeBody;
+  let showArFallback = false;
+  let contentPath = entry.contentPath;
+
+  if (lang === "ar" && !entry.contentPath?.startsWith("content/ar/")) {
+    showArFallback = true;
+    const daEntry = findEntry(index, "da", entry.recipeId, null);
+    if (daEntry?.contentPath) contentPath = daEntry.contentPath;
+  }
 
   let data;
   try {
-    const res = await fetch(entry.contentPath);
+    const res = await fetch(contentPath);
     if (!res.ok) throw new Error("content missing");
     data = await res.json();
   } catch {
-    showNotFound(lang, article);
-    return;
+    if (lang === "ar" && !showArFallback) {
+      showArFallback = true;
+      const daEntry = findEntry(index, "da", entry.recipeId, null);
+      if (daEntry?.contentPath) {
+        try {
+          const res = await fetch(daEntry.contentPath);
+          if (!res.ok) throw new Error("content missing");
+          data = await res.json();
+        } catch {
+          showNotFound(lang, article);
+          return;
+        }
+      } else {
+        showNotFound(lang, article);
+        return;
+      }
+    } else {
+      showNotFound(lang, article);
+      return;
+    }
+  }
+
+  if (lang === "ar" && contentPath.startsWith("content/da/")) {
+    showArFallback = true;
   }
 
   const bodyLang = showArFallback ? "da" : lang;
@@ -119,9 +151,15 @@ async function main() {
       </aside>`
     : "";
 
+  const titleAttrs = showArFallback
+    ? ' class="recipe-title-ltr" dir="ltr"'
+    : lang === "ar"
+      ? ' dir="rtl"'
+      : "";
+
   article.innerHTML = `
     <article class="recipe-article">
-      <h1 class="recipe-title-ltr" dir="ltr">${escapeHtml(data.title)}</h1>
+      <h1${titleAttrs}>${escapeHtml(data.title)}</h1>
       <p class="recipe-meta">${escapeHtml(catLabel)}</p>
       ${fallbackBlock}
       <div class="recipe-layout">
@@ -141,11 +179,10 @@ async function main() {
 }
 
 function findEntry(index, lang, recipeId, slugParam) {
-  const tree = index[lang] ?? (lang === "ar" ? index.da : null);
+  const tree = index[lang];
   if (!tree?.groups) return null;
 
-  const aliasLang = lang === "ar" ? "da" : lang;
-  const aliases = index.slugAliases?.[aliasLang] ?? {};
+  const aliases = index.slugAliases?.[lang] ?? {};
 
   if (recipeId) {
     for (const g of tree.groups) {
@@ -174,9 +211,8 @@ function findByFullSlug(tree, fullSlug) {
 
 function siblingTitlesOnScan(index, lang, scan, recipeId) {
   if (!scan) return [];
-  const treeLang = lang === "ar" ? "da" : lang;
   const titles = [];
-  for (const g of index[treeLang]?.groups ?? []) {
+  for (const g of index[lang]?.groups ?? []) {
     for (const r of g.recipes ?? []) {
       if (r.scan === scan && r.recipeId !== recipeId) {
         titles.push(r.title);
@@ -205,12 +241,16 @@ function buildScanAlt(lang, title, siblingTitles) {
   const base =
     lang === "da"
       ? `Håndskrevet side: ${title}`
-      : `Handwritten page: ${title}`;
+      : lang === "ar"
+        ? `صفحة مكتوبة بخط اليد: ${title}`
+        : `Handwritten page: ${title}`;
   if (!siblingTitles.length) return base;
   const also =
     lang === "da"
       ? ` — notesiden viser også ${siblingTitles.join(", ")}`
-      : ` — page also shows ${siblingTitles.join(", ")}`;
+      : lang === "ar"
+        ? ` — الصفحة تُظهر أيضًا ${siblingTitles.join("، ")}`
+        : ` — page also shows ${siblingTitles.join(", ")}`;
   return base + also;
 }
 

@@ -20,7 +20,7 @@ async function main() {
     return;
   }
 
-  const tree = index[lang] ?? index.da;
+  const tree = index[lang];
   if (!tree?.groups?.length) {
     container.innerHTML = emptyBlock(lang);
     return;

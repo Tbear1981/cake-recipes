@@ -12,7 +12,7 @@
 
 ```
 recipes/
-  en/                          da/
+  en/                          da/                          ar/
     salads/                      salater/
     cakes/                       kager/
     soups/                       supper/

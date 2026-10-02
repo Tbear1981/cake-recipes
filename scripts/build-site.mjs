@@ -52,6 +52,15 @@ const TOP_CATEGORY = {
     sylt: { id: "preserves", categoryKey: "categoryPreserves" },
     historie: { id: "archive", categoryKey: "categoryArchive" },
   },
+  ar: {
+    سلطات: { id: "salads", categoryKey: "categorySalads" },
+    كعك: { id: "cakes", categoryKey: "categoryCakes" },
+    شوربات: { id: "soups", categoryKey: "categorySoups" },
+    سمك: { id: "fish", categoryKey: "categoryFish" },
+    صلصات: { id: "sauces", categoryKey: "categorySauces" },
+    "مقبلات-باردة": { id: "cold-starters", categoryKey: "categoryColdStarters" },
+    معلبات: { id: "preserves", categoryKey: "categoryPreserves" },
+  },
 };
 
 /** @type {Record<string, Record<string, { id: string; categoryKey: string }>>} */
@@ -68,13 +77,21 @@ const DESSERT_SUB = {
     creme: { id: "creme", categoryKey: "categoryCreme" },
     is: { id: "is", categoryKey: "categoryIs" },
   },
+  ar: {
+    فورماج: { id: "fromage", categoryKey: "categoryFromage" },
+    بودنغ: { id: "pudding", categoryKey: "categoryPudding" },
+    كريمة: { id: "creme", categoryKey: "categoryCreme" },
+    "آيس-كريم": { id: "is", categoryKey: "categoryIs" },
+  },
 };
 
 function resolveCategory(lang, categoryPath) {
   const parts = categoryPath.split("/");
   if (parts.length === 2) {
     const [top, sub] = parts;
-    if ((top === "desserts" || top === "desserter") && DESSERT_SUB[lang]?.[sub]) {
+    const isDessertTop =
+      top === "desserts" || top === "desserter" || top === "حلويات";
+    if (isDessertTop && DESSERT_SUB[lang]?.[sub]) {
       return DESSERT_SUB[lang][sub];
     }
   }
@@ -136,15 +153,18 @@ function copyOriginals() {
 
 function buildSlugAliases() {
   /** @type {Record<string, Record<string, string>>} */
-  const aliases = { en: {}, da: {} };
+  const aliases = { en: {}, da: {}, ar: {} };
   const pairs = buildRecipePairs();
   for (const [recipeId, slugs] of Object.entries(pairs)) {
     aliases.en[recipeId] = slugs.en;
     aliases.da[recipeId] = slugs.da;
+    aliases.ar[recipeId] = slugs.ar;
     const enBase = slugs.en.split("/").pop();
     const daBase = slugs.da.split("/").pop();
+    const arBase = slugs.ar.split("/").pop();
     if (enBase) aliases.en[enBase] = slugs.en;
     if (daBase) aliases.da[daBase] = slugs.da;
+    if (arBase) aliases.ar[arBase] = slugs.ar;
   }
   return aliases;
 }
@@ -224,14 +244,12 @@ function buildLang(lang) {
 fs.mkdirSync(CONTENT, { recursive: true });
 copyOriginals();
 
-const daBuilt = buildLang("da");
-
 const index = {
   recipePairs: buildRecipePairs(),
   slugAliases: buildSlugAliases(),
   en: buildLang("en"),
-  da: daBuilt,
-  ar: daBuilt,
+  da: buildLang("da"),
+  ar: buildLang("ar"),
 };
 
 fs.writeFileSync(

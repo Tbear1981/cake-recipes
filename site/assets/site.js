@@ -150,13 +150,11 @@ function switchLangHref(targetLang) {
 
 function resolveSlugToRecipeId(slug, lang) {
   if (!slug || !langSwitchContext?.slugAliases) return null;
-  const aliasLang = lang === "ar" ? "da" : lang;
-  const aliases = langSwitchContext.slugAliases[aliasLang];
+  const aliases = langSwitchContext.slugAliases[lang];
   if (!aliases) return null;
   const full = aliases[slug] ?? slug;
-  const pairLang = lang === "ar" ? "da" : lang;
   for (const [id, paths] of Object.entries(langSwitchContext.recipePairs ?? {})) {
-    if (paths[pairLang] === full) return id;
+    if (paths[lang] === full) return id;
   }
   return null;
 }

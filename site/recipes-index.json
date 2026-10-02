@@ -2,95 +2,118 @@
   "recipePairs": {
     "buttermilk-fromage": {
       "en": "desserts/fromage/buttermilk-fromage",
-      "da": "desserter/fromage/kaernemaelks-fromage"
+      "da": "desserter/fromage/kaernemaelks-fromage",
+      "ar": "حلويات/فورماج/فورماج-اللبن-المخاض"
     },
     "alexandra-pudding": {
       "en": "desserts/pudding/alexandra-pudding",
-      "da": "desserter/budding/alexandra-budding"
+      "da": "desserter/budding/alexandra-budding",
+      "ar": "حلويات/بودنغ/بودنغ-ألكسندرا"
     },
     "italian-salad-without-oil": {
       "en": "salads/italian-salad-without-oil",
-      "da": "salater/italiensk-salat-uden-olie"
+      "da": "salater/italiensk-salat-uden-olie",
+      "ar": "سلطات/سلطة-إيطالية-بلا-زيت"
     },
     "herring-salad": {
       "en": "salads/herring-salad",
-      "da": "salater/sildesalat"
+      "da": "salater/sildesalat",
+      "ar": "سلطات/سلطة-الرنجة"
     },
     "small-egg-white-cookies": {
       "en": "cakes/small-egg-white-cookies",
-      "da": "kager/smaa-aeggehvidekager"
+      "da": "kager/smaa-aeggehvidekager",
+      "ar": "كعك/كعك-بياض-البيض-الصغير"
     },
     "layer-cake": {
       "en": "cakes/layer-cake",
-      "da": "kager/lagkage"
+      "da": "kager/lagkage",
+      "ar": "كعك/كعكة-الطبقات"
     },
     "marzipan-cake": {
       "en": "cakes/marzipan-cake",
-      "da": "kager/marcipankage"
+      "da": "kager/marcipankage",
+      "ar": "كعك/كعكة-المارتسيبان"
     },
     "lemon-soup": {
       "en": "soups/lemon-soup",
-      "da": "supper/citron-suppe"
+      "da": "supper/citron-suppe",
+      "ar": "شوربات/شوربة-الليمون"
     },
     "lemon-cream": {
       "en": "desserts/creme/lemon-cream",
-      "da": "desserter/creme/citroncreme"
+      "da": "desserter/creme/citroncreme",
+      "ar": "حلويات/كريمة/كريمة-الليمون"
     },
     "fish-terrine": {
       "en": "fish/fish-terrine",
-      "da": "fisk/fisketerrine"
+      "da": "fisk/fisketerrine",
+      "ar": "سمك/تيرين-السمك"
     },
     "mushroom-sauce": {
       "en": "sauces/mushroom-sauce",
-      "da": "saucer/champignonsauce"
+      "da": "saucer/champignonsauce",
+      "ar": "صلصات/صلصة-الفطر"
     },
     "black-caviar-ring": {
       "en": "cold-starters/black-caviar-ring",
-      "da": "kolde-forretter/sort-kaviar-rand"
+      "da": "kolde-forretter/sort-kaviar-rand",
+      "ar": "مقبلات-باردة/قالب-الكافيار-الأسود"
     },
     "avocado-mousse-with-caviar-sauce": {
       "en": "cold-starters/avocado-mousse-with-caviar-sauce",
-      "da": "kolde-forretter/avocadomousse-med-kaviarsovs"
+      "da": "kolde-forretter/avocadomousse-med-kaviarsovs",
+      "ar": "مقبلات-باردة/موس-الأفوكادو-بصلصة-الكافيار"
     },
     "juice-pudding": {
       "en": "desserts/pudding/juice-pudding",
-      "da": "desserter/budding/saft-budding"
+      "da": "desserter/budding/saft-budding",
+      "ar": "حلويات/بودنغ/بودنغ-العصير"
     },
     "apple-raisin-chutney": {
       "en": "preserves/apple-raisin-chutney",
-      "da": "sylt/aeble-rosin-chutney"
+      "da": "sylt/aeble-rosin-chutney",
+      "ar": "معلبات/تشاتني-التفاح-والزبيب"
     },
     "mormors-cake": {
       "en": "cakes/mormors-cake",
-      "da": "kager/mormors-kage"
+      "da": "kager/mormors-kage",
+      "ar": "كعك/كعكة-مورمور"
     },
     "parfait": {
       "en": "desserts/is/parfait",
-      "da": "desserter/is/parfait-is"
+      "da": "desserter/is/parfait-is",
+      "ar": "حلويات/آيس-كريم/بارفيه"
     },
     "green-gooseberries": {
       "en": "preserves/green-gooseberries",
-      "da": "sylt/groenne-stikkelsbaer"
+      "da": "sylt/groenne-stikkelsbaer",
+      "ar": "معلبات/عنب-الثعلب-الأخضر"
     },
     "soda-cake": {
       "en": "cakes/soda-cake",
-      "da": "kager/sodakage"
+      "da": "kager/sodakage",
+      "ar": "كعك/كعكة-الصودا"
     },
     "syrup-layer-cake": {
       "en": "cakes/syrup-layer-cake",
-      "da": "kager/sirups-lagkage"
+      "da": "kager/sirups-lagkage",
+      "ar": "كعك/كعكة-الطبقات-بالشراب"
     },
     "cocoa-cake": {
       "en": "cakes/cocoa-cake",
-      "da": "kager/cacaokage"
+      "da": "kager/cacaokage",
+      "ar": "كعك/كعكة-الكاكاو"
     },
     "luksus-appelsin-kage": {
       "en": "cakes/luksus-appelsin-kage",
-      "da": "kager/luksus-appelsin-kage"
+      "da": "kager/luksus-appelsin-kage",
+      "ar": "كعك/كعكة-البرتقال-الفاخرة"
     },
     "chokoladekage": {
       "en": "cakes/chokoladekage",
-      "da": "kager/chokoladekage"
+      "da": "kager/chokoladekage",
+      "ar": "كعك/كعكة-الشوكولاتة"
     }
   },
   "slugAliases": {
@@ -164,6 +187,54 @@
       "cacaokage": "kager/cacaokage",
       "luksus-appelsin-kage": "kager/luksus-appelsin-kage",
       "chokoladekage": "kager/chokoladekage"
+    },
+    "ar": {
+      "buttermilk-fromage": "حلويات/فورماج/فورماج-اللبن-المخاض",
+      "فورماج-اللبن-المخاض": "حلويات/فورماج/فورماج-اللبن-المخاض",
+      "alexandra-pudding": "حلويات/بودنغ/بودنغ-ألكسندرا",
+      "بودنغ-ألكسندرا": "حلويات/بودنغ/بودنغ-ألكسندرا",
+      "italian-salad-without-oil": "سلطات/سلطة-إيطالية-بلا-زيت",
+      "سلطة-إيطالية-بلا-زيت": "سلطات/سلطة-إيطالية-بلا-زيت",
+      "herring-salad": "سلطات/سلطة-الرنجة",
+      "سلطة-الرنجة": "سلطات/سلطة-الرنجة",
+      "small-egg-white-cookies": "كعك/كعك-بياض-البيض-الصغير",
+      "كعك-بياض-البيض-الصغير": "كعك/كعك-بياض-البيض-الصغير",
+      "layer-cake": "كعك/كعكة-الطبقات",
+      "كعكة-الطبقات": "كعك/كعكة-الطبقات",
+      "marzipan-cake": "كعك/كعكة-المارتسيبان",
+      "كعكة-المارتسيبان": "كعك/كعكة-المارتسيبان",
+      "lemon-soup": "شوربات/شوربة-الليمون",
+      "شوربة-الليمون": "شوربات/شوربة-الليمون",
+      "lemon-cream": "حلويات/كريمة/كريمة-الليمون",
+      "كريمة-الليمون": "حلويات/كريمة/كريمة-الليمون",
+      "fish-terrine": "سمك/تيرين-السمك",
+      "تيرين-السمك": "سمك/تيرين-السمك",
+      "mushroom-sauce": "صلصات/صلصة-الفطر",
+      "صلصة-الفطر": "صلصات/صلصة-الفطر",
+      "black-caviar-ring": "مقبلات-باردة/قالب-الكافيار-الأسود",
+      "قالب-الكافيار-الأسود": "مقبلات-باردة/قالب-الكافيار-الأسود",
+      "avocado-mousse-with-caviar-sauce": "مقبلات-باردة/موس-الأفوكادو-بصلصة-الكافيار",
+      "موس-الأفوكادو-بصلصة-الكافيار": "مقبلات-باردة/موس-الأفوكادو-بصلصة-الكافيار",
+      "juice-pudding": "حلويات/بودنغ/بودنغ-العصير",
+      "بودنغ-العصير": "حلويات/بودنغ/بودنغ-العصير",
+      "apple-raisin-chutney": "معلبات/تشاتني-التفاح-والزبيب",
+      "تشاتني-التفاح-والزبيب": "معلبات/تشاتني-التفاح-والزبيب",
+      "mormors-cake": "كعك/كعكة-مورمور",
+      "كعكة-مورمور": "كعك/كعكة-مورمور",
+      "parfait": "حلويات/آيس-كريم/بارفيه",
+      "بارفيه": "حلويات/آيس-كريم/بارفيه",
+      "green-gooseberries": "معلبات/عنب-الثعلب-الأخضر",
+      "عنب-الثعلب-الأخضر": "معلبات/عنب-الثعلب-الأخضر",
+      "soda-cake": "كعك/كعكة-الصودا",
+      "كعكة-الصودا": "كعك/كعكة-الصودا",
+      "syrup-layer-cake": "كعك/كعكة-الطبقات-بالشراب",
+      "كعكة-الطبقات-بالشراب": "كعك/كعكة-الطبقات-بالشراب",
+      "cocoa-cake": "كعك/كعكة-الكاكاو",
+      "كعكة-الكاكاو": "كعك/كعكة-الكاكاو",
+      "luksus-appelsin-kage": "كعك/كعكة-البرتقال-الفاخرة",
+      "كعكة-البرتقال-الفاخرة": "كعك/كعكة-البرتقال-الفاخرة",
+      "chokoladekage": "كعك/كعكة-الشوكولاتة",
+      "كعكة-الشوكولاتة": "كعك/كعكة-الشوكولاتة"
     }
   },
   "en": {
@@ -631,74 +702,74 @@
     ]
   },
   "ar": {
-    "lang": "da",
+    "lang": "ar",
     "groups": [
       {
         "id": "cakes",
         "categoryKey": "categoryCakes",
         "recipes": [
           {
-            "recipeId": "cocoa-cake",
-            "slug": "kager/cacaokage",
-            "title": "Cacaokage",
-            "scan": "originals/sodakage-sirups-cacaokage.jpg",
-            "contentPath": "content/da/kager/cacaokage.json"
-          },
-          {
-            "recipeId": "chokoladekage",
-            "slug": "kager/chokoladekage",
-            "title": "Chokoladekage",
-            "scan": "originals/chokoladekage-ugens-lille-laekkeri.jpg",
-            "contentPath": "content/da/kager/chokoladekage.json"
-          },
-          {
-            "recipeId": "layer-cake",
-            "slug": "kager/lagkage",
-            "title": "Lagkage",
+            "recipeId": "small-egg-white-cookies",
+            "slug": "كعك/كعك-بياض-البيض-الصغير",
+            "title": "كعك بياض البيض الصغير",
             "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
-            "contentPath": "content/da/kager/lagkage.json"
+            "contentPath": "content/ar/كعك/كعك-بياض-البيض-الصغير.json"
           },
           {
             "recipeId": "luksus-appelsin-kage",
-            "slug": "kager/luksus-appelsin-kage",
-            "title": "Luksus-appelsin-kage",
+            "slug": "كعك/كعكة-البرتقال-الفاخرة",
+            "title": "كعكة البرتقال الفاخرة",
             "scan": "originals/luksus-appelsin-kage.jpg",
-            "contentPath": "content/da/kager/luksus-appelsin-kage.json"
+            "contentPath": "content/ar/كعك/كعكة-البرتقال-الفاخرة.json"
           },
           {
-            "recipeId": "marzipan-cake",
-            "slug": "kager/marcipankage",
-            "title": "Marcipankage",
-            "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
-            "contentPath": "content/da/kager/marcipankage.json"
-          },
-          {
-            "recipeId": "mormors-cake",
-            "slug": "kager/mormors-kage",
-            "title": "Mormors kage",
-            "scan": "originals/mormors-kage.jpg",
-            "contentPath": "content/da/kager/mormors-kage.json"
-          },
-          {
-            "recipeId": "syrup-layer-cake",
-            "slug": "kager/sirups-lagkage",
-            "title": "Sirups Lagkage",
-            "scan": "originals/sodakage-sirups-cacaokage.jpg",
-            "contentPath": "content/da/kager/sirups-lagkage.json"
-          },
-          {
-            "recipeId": "small-egg-white-cookies",
-            "slug": "kager/smaa-aeggehvidekager",
-            "title": "Smaa Æggehvidekager",
-            "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
-            "contentPath": "content/da/kager/smaa-aeggehvidekager.json"
+            "recipeId": "chokoladekage",
+            "slug": "كعك/كعكة-الشوكولاتة",
+            "title": "كعكة الشوكولاتة",
+            "scan": "originals/chokoladekage-ugens-lille-laekkeri.jpg",
+            "contentPath": "content/ar/كعك/كعكة-الشوكولاتة.json"
           },
           {
             "recipeId": "soda-cake",
-            "slug": "kager/sodakage",
-            "title": "Sodakage",
+            "slug": "كعك/كعكة-الصودا",
+            "title": "كعكة الصودا",
             "scan": "originals/sodakage-sirups-cacaokage.jpg",
-            "contentPath": "content/da/kager/sodakage.json"
+            "contentPath": "content/ar/كعك/كعكة-الصودا.json"
+          },
+          {
+            "recipeId": "layer-cake",
+            "slug": "كعك/كعكة-الطبقات",
+            "title": "كعكة الطبقات",
+            "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
+            "contentPath": "content/ar/كعك/كعكة-الطبقات.json"
+          },
+          {
+            "recipeId": "syrup-layer-cake",
+            "slug": "كعك/كعكة-الطبقات-بالشراب",
+            "title": "كعكة الطبقات بالشراب",
+            "scan": "originals/sodakage-sirups-cacaokage.jpg",
+            "contentPath": "content/ar/كعك/كعكة-الطبقات-بالشراب.json"
+          },
+          {
+            "recipeId": "cocoa-cake",
+            "slug": "كعك/كعكة-الكاكاو",
+            "title": "كعكة الكاكاو",
+            "scan": "originals/sodakage-sirups-cacaokage.jpg",
+            "contentPath": "content/ar/كعك/كعكة-الكاكاو.json"
+          },
+          {
+            "recipeId": "marzipan-cake",
+            "slug": "كعك/كعكة-المارتسيبان",
+            "title": "كعكة المارتسيبان",
+            "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
+            "contentPath": "content/ar/كعك/كعكة-المارتسيبان.json"
+          },
+          {
+            "recipeId": "mormors-cake",
+            "slug": "كعك/كعكة-مورمور",
+            "title": "كعكة مورمور",
+            "scan": "originals/mormors-kage.jpg",
+            "contentPath": "content/ar/كعك/كعكة-مورمور.json"
           }
         ]
       },
@@ -707,18 +778,18 @@
         "categoryKey": "categoryColdStarters",
         "recipes": [
           {
-            "recipeId": "avocado-mousse-with-caviar-sauce",
-            "slug": "kolde-forretter/avocadomousse-med-kaviarsovs",
-            "title": "Avocadomousse med kaviarsovs",
-            "scan": "originals/avocadomousse-kaviarsovs.jpg",
-            "contentPath": "content/da/kolde-forretter/avocadomousse-med-kaviarsovs.json"
+            "recipeId": "black-caviar-ring",
+            "slug": "مقبلات-باردة/قالب-الكافيار-الأسود",
+            "title": "قالب الكافيار الأسود",
+            "scan": "originals/sort-kaviar-rand.jpg",
+            "contentPath": "content/ar/مقبلات-باردة/قالب-الكافيار-الأسود.json"
           },
           {
-            "recipeId": "black-caviar-ring",
-            "slug": "kolde-forretter/sort-kaviar-rand",
-            "title": "Sort Kaviar Rand",
-            "scan": "originals/sort-kaviar-rand.jpg",
-            "contentPath": "content/da/kolde-forretter/sort-kaviar-rand.json"
+            "recipeId": "avocado-mousse-with-caviar-sauce",
+            "slug": "مقبلات-باردة/موس-الأفوكادو-بصلصة-الكافيار",
+            "title": "موس الأفوكادو بصلصة الكافيار",
+            "scan": "originals/avocadomousse-kaviarsovs.jpg",
+            "contentPath": "content/ar/مقبلات-باردة/موس-الأفوكادو-بصلصة-الكافيار.json"
           }
         ]
       },
@@ -728,10 +799,10 @@
         "recipes": [
           {
             "recipeId": "lemon-cream",
-            "slug": "desserter/creme/citroncreme",
-            "title": "Citroncrème",
+            "slug": "حلويات/كريمة/كريمة-الليمون",
+            "title": "كريمة الليمون",
             "scan": "originals/citroncreme.jpg",
-            "contentPath": "content/da/desserter/creme/citroncreme.json"
+            "contentPath": "content/ar/حلويات/كريمة/كريمة-الليمون.json"
           }
         ]
       },
@@ -741,10 +812,10 @@
         "recipes": [
           {
             "recipeId": "fish-terrine",
-            "slug": "fisk/fisketerrine",
-            "title": "Fisketerrine",
+            "slug": "سمك/تيرين-السمك",
+            "title": "تيرين السمك",
             "scan": "originals/fisketerrine.jpg",
-            "contentPath": "content/da/fisk/fisketerrine.json"
+            "contentPath": "content/ar/سمك/تيرين-السمك.json"
           }
         ]
       },
@@ -754,10 +825,10 @@
         "recipes": [
           {
             "recipeId": "buttermilk-fromage",
-            "slug": "desserter/fromage/kaernemaelks-fromage",
-            "title": "Kærnemælksfromage",
+            "slug": "حلويات/فورماج/فورماج-اللبن-المخاض",
+            "title": "فورماج اللبن المخاض",
             "scan": "originals/fromage-alexandra-budding.jpg",
-            "contentPath": "content/da/desserter/fromage/kaernemaelks-fromage.json"
+            "contentPath": "content/ar/حلويات/فورماج/فورماج-اللبن-المخاض.json"
           }
         ]
       },
@@ -767,10 +838,10 @@
         "recipes": [
           {
             "recipeId": "parfait",
-            "slug": "desserter/is/parfait-is",
-            "title": "Parfait (Is)",
+            "slug": "حلويات/آيس-كريم/بارفيه",
+            "title": "بارفيه (آيس كريم)",
             "scan": "originals/parfait-is.jpg",
-            "contentPath": "content/da/desserter/is/parfait-is.json"
+            "contentPath": "content/ar/حلويات/آيس-كريم/بارفيه.json"
           }
         ]
       },
@@ -780,17 +851,17 @@
         "recipes": [
           {
             "recipeId": "apple-raisin-chutney",
-            "slug": "sylt/aeble-rosin-chutney",
-            "title": "Æble-rosin-chutney",
+            "slug": "معلبات/تشاتني-التفاح-والزبيب",
+            "title": "تشاتني التفاح والزبيب",
             "scan": "originals/aeble-rosin-chutney.jpg",
-            "contentPath": "content/da/sylt/aeble-rosin-chutney.json"
+            "contentPath": "content/ar/معلبات/تشاتني-التفاح-والزبيب.json"
           },
           {
             "recipeId": "green-gooseberries",
-            "slug": "sylt/groenne-stikkelsbaer",
-            "title": "Grønne Stikkelsbær",
+            "slug": "معلبات/عنب-الثعلب-الأخضر",
+            "title": "عنب الثعلب الأخضر",
             "scan": "originals/groenne-stikkelsbaer.jpg",
-            "contentPath": "content/da/sylt/groenne-stikkelsbaer.json"
+            "contentPath": "content/ar/معلبات/عنب-الثعلب-الأخضر.json"
           }
         ]
       },
@@ -800,17 +871,17 @@
         "recipes": [
           {
             "recipeId": "alexandra-pudding",
-            "slug": "desserter/budding/alexandra-budding",
-            "title": "Alexandra budding",
+            "slug": "حلويات/بودنغ/بودنغ-ألكسندرا",
+            "title": "بودنغ ألكسندرا",
             "scan": "originals/fromage-alexandra-budding.jpg",
-            "contentPath": "content/da/desserter/budding/alexandra-budding.json"
+            "contentPath": "content/ar/حلويات/بودنغ/بودنغ-ألكسندرا.json"
           },
           {
             "recipeId": "juice-pudding",
-            "slug": "desserter/budding/saft-budding",
-            "title": "Saft Budding",
+            "slug": "حلويات/بودنغ/بودنغ-العصير",
+            "title": "بودنغ العصير",
             "scan": "originals/saft-budding.jpg",
-            "contentPath": "content/da/desserter/budding/saft-budding.json"
+            "contentPath": "content/ar/حلويات/بودنغ/بودنغ-العصير.json"
           }
         ]
       },
@@ -820,17 +891,17 @@
         "recipes": [
           {
             "recipeId": "italian-salad-without-oil",
-            "slug": "salater/italiensk-salat-uden-olie",
-            "title": "Italiensk Salat uden Olie",
+            "slug": "سلطات/سلطة-إيطالية-بلا-زيت",
+            "title": "سلطة إيطالية بلا زيت",
             "scan": "originals/italiensk-salat-sildesalat.jpg",
-            "contentPath": "content/da/salater/italiensk-salat-uden-olie.json"
+            "contentPath": "content/ar/سلطات/سلطة-إيطالية-بلا-زيت.json"
           },
           {
             "recipeId": "herring-salad",
-            "slug": "salater/sildesalat",
-            "title": "Sildesalat",
+            "slug": "سلطات/سلطة-الرنجة",
+            "title": "سلطة الرنجة",
             "scan": "originals/italiensk-salat-sildesalat.jpg",
-            "contentPath": "content/da/salater/sildesalat.json"
+            "contentPath": "content/ar/سلطات/سلطة-الرنجة.json"
           }
         ]
       },
@@ -840,10 +911,10 @@
         "recipes": [
           {
             "recipeId": "mushroom-sauce",
-            "slug": "saucer/champignonsauce",
-            "title": "Champignonsauce",
+            "slug": "صلصات/صلصة-الفطر",
+            "title": "صلصة الفطر",
             "scan": "originals/champignonsauce.jpg",
-            "contentPath": "content/da/saucer/champignonsauce.json"
+            "contentPath": "content/ar/صلصات/صلصة-الفطر.json"
           }
         ]
       },
@@ -853,10 +924,10 @@
         "recipes": [
           {
             "recipeId": "lemon-soup",
-            "slug": "supper/citron-suppe",
-            "title": "Citron Suppe",
+            "slug": "شوربات/شوربة-الليمون",
+            "title": "شوربة الليمون",
             "scan": "originals/citron-suppe.jpg",
-            "contentPath": "content/da/supper/citron-suppe.json"
+            "contentPath": "content/ar/شوربات/شوربة-الليمون.json"
           }
         ]
       }
