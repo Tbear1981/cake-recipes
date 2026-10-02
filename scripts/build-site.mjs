@@ -221,11 +221,13 @@ function buildLang(lang) {
     if (!groups.has(cat.id)) {
       groups.set(cat.id, { categoryKey: cat.categoryKey, recipes: [] });
     }
+    const metaDescription = excerptFromMd(md);
     groups.get(cat.id).recipes.push({
       recipeId,
       slug,
       title: displayTitle,
       scan,
+      metaDescription,
       contentPath: `content/${outRel.replace(/\\/g, "/")}`,
     });
   }

@@ -31,13 +31,7 @@ async function main() {
     if (!group.recipes?.length) continue;
     const heading = categoryLabel(lang, group.categoryKey);
     const items = group.recipes
-      .map((r) => {
-        const href = withLang(
-          `/recipe?id=${encodeURIComponent(r.recipeId)}`,
-          lang
-        );
-        return `<li><a class="recipe-list__title" href="${escapeHtml(href)}">${escapeHtml(r.title)}</a></li>`;
-      })
+      .map((r) => renderRecipeCard(lang, index, r))
       .join("");
     parts.push(
       `<section class="recipe-group" id="group-${escapeHtml(group.id)}"><h2>${escapeHtml(heading)}</h2><ul class="recipe-list">${items}</ul></section>`
@@ -50,6 +44,49 @@ async function main() {
   }
 
   container.innerHTML = parts.join("");
+}
+
+function siblingCountOnScan(index, lang, scan, recipeId) {
+  if (!scan) return 0;
+  let n = 0;
+  for (const g of index[lang]?.groups ?? []) {
+    for (const r of g.recipes ?? []) {
+      if (r.scan === scan && r.recipeId !== recipeId) n += 1;
+    }
+  }
+  return n;
+}
+
+function renderRecipeCard(lang, index, r) {
+  const href = withLang(
+    `/recipe?id=${encodeURIComponent(r.recipeId)}`,
+    lang
+  );
+  const title = escapeHtml(r.title);
+  const lede = escapeHtml(r.metaDescription ?? "");
+  const shared =
+    siblingCountOnScan(index, lang, r.scan, r.recipeId) > 0
+      ? `<span class="recipe-card__shared">${escapeHtml(t(lang, "homeSamePageHint"))}</span>`
+      : "";
+
+  let thumbInner;
+  if (r.scan) {
+    const src = escapeHtml(r.scan);
+    thumbInner = `<img class="recipe-card__thumb" src="${src}" alt="" width="120" height="160" loading="lazy" decoding="async" />`;
+  } else {
+    thumbInner = `<span class="recipe-card__thumb-placeholder" aria-hidden="true">${escapeHtml(t(lang, "scanPlaceholder"))}</span>`;
+  }
+
+  return `<li class="recipe-card">
+    <a class="recipe-card__link" href="${escapeHtml(href)}">
+      <span class="recipe-card__thumb-wrap">${thumbInner}</span>
+      <span class="recipe-card__body">
+        <span class="recipe-card__title">${title}</span>
+        ${lede ? `<span class="recipe-card__lede">${lede}</span>` : ""}
+        ${shared}
+      </span>
+    </a>
+  </li>`;
 }
 
 function emptyBlock(lang) {

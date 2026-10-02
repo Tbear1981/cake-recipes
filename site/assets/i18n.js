@@ -31,6 +31,7 @@ export const STRINGS = {
     scanHeading: "Håndskrift",
     scanDisclosure: "Se håndskrift",
     scanPlaceholder: "Scan kommer",
+    homeSamePageHint: "Samme side",
     aboutTitle: "Om opskrifterne",
     aboutMetaDescription:
       "Historien bag Lises mormors håndskrevne opskrifter — notesbog, udklip og den skrevne side ved siden af den indtastede.",
@@ -94,6 +95,7 @@ export const STRINGS = {
     scanHeading: "Handwriting",
     scanDisclosure: "See handwriting",
     scanPlaceholder: "Scan coming",
+    homeSamePageHint: "Same page",
     aboutTitle: "About the recipes",
     aboutMetaDescription:
       "The story behind Lise’s mormor’s handwritten recipes — notebook, clippings, and her writing shown next to the typed page.",
@@ -154,6 +156,7 @@ export const STRINGS = {
     scanHeading: "خط اليد",
     scanDisclosure: "عرض خط اليد",
     scanPlaceholder: "ستأتي الصورة قريبًا",
+    homeSamePageHint: "نفس الصفحة",
     aboutTitle: "عن الوصفات",
     aboutMetaDescription:
       "قصة وصفات مورمور ليزه المكتوبة بخط اليد — دفتر ملاحظات وقصاصات، والصفحة الأصلية بجانب النص المكتوب.",

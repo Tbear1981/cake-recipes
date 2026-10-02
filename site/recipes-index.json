@@ -249,6 +249,7 @@
             "slug": "cakes/chokoladekage",
             "title": "Chocolate cake",
             "scan": "originals/chokoladekage-ugens-lille-laekkeri.jpg",
+            "metaDescription": "Ugens lille lækkeri — a moist cocoa loaf cake; freezes well.",
             "contentPath": "content/en/cakes/chokoladekage.json"
           },
           {
@@ -256,6 +257,7 @@
             "slug": "cakes/cocoa-cake",
             "title": "Cocoa cake",
             "scan": "originals/sodakage-sirups-cacaokage.jpg",
+            "metaDescription": "A cold biscuit cake set with cocoa and melted shortening.",
             "contentPath": "content/en/cakes/cocoa-cake.json"
           },
           {
@@ -263,6 +265,7 @@
             "slug": "cakes/layer-cake",
             "title": "Layer cake",
             "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
+            "metaDescription": "A classic Danish sponge layer cake base (lagkagebunde).",
             "contentPath": "content/en/cakes/layer-cake.json"
           },
           {
@@ -270,6 +273,7 @@
             "slug": "cakes/luksus-appelsin-kage",
             "title": "Luksus appelsin cake",
             "scan": "originals/luksus-appelsin-kage.jpg",
+            "metaDescription": "A rich orange cake with chocolate and vanilla.",
             "contentPath": "content/en/cakes/luksus-appelsin-kage.json"
           },
           {
@@ -277,6 +281,7 @@
             "slug": "cakes/marzipan-cake",
             "title": "Marzipan cake",
             "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
+            "metaDescription": "A rich almond cake with marzipan flavour.",
             "contentPath": "content/en/cakes/marzipan-cake.json"
           },
           {
@@ -284,6 +289,7 @@
             "slug": "cakes/mormors-cake",
             "title": "Mormors kage",
             "scan": "originals/mormors-kage.jpg",
+            "metaDescription": "A layered cake with cocoa almond filling (title faint in the original notebook).",
             "contentPath": "content/en/cakes/mormors-cake.json"
           },
           {
@@ -291,6 +297,7 @@
             "slug": "cakes/small-egg-white-cookies",
             "title": "Small egg-white cookies",
             "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
+            "metaDescription": "Light, crisp meringue-style cookies baked in small spoonfuls.",
             "contentPath": "content/en/cakes/small-egg-white-cookies.json"
           },
           {
@@ -298,6 +305,7 @@
             "slug": "cakes/soda-cake",
             "title": "Soda cake",
             "scan": "originals/sodakage-sirups-cacaokage.jpg",
+            "metaDescription": "A sponge cake with potato starch and wheat flour.",
             "contentPath": "content/en/cakes/soda-cake.json"
           },
           {
@@ -305,6 +313,7 @@
             "slug": "cakes/syrup-layer-cake",
             "title": "Syrup layer cake",
             "scan": "originals/sodakage-sirups-cacaokage.jpg",
+            "metaDescription": "A syrup-rich layer cake (sirups lagkage) from sparse notebook notes.",
             "contentPath": "content/en/cakes/syrup-layer-cake.json"
           }
         ]
@@ -318,6 +327,7 @@
             "slug": "cold-starters/avocado-mousse-with-caviar-sauce",
             "title": "Avocado mousse with caviar sauce",
             "scan": "originals/avocadomousse-kaviarsovs.jpg",
+            "metaDescription": "Serves 4. From a magazine clipping in the collection (as Maggio described).",
             "contentPath": "content/en/cold-starters/avocado-mousse-with-caviar-sauce.json"
           },
           {
@@ -325,6 +335,7 @@
             "slug": "cold-starters/black-caviar-ring",
             "title": "Black caviar ring",
             "scan": "originals/sort-kaviar-rand.jpg",
+            "metaDescription": "Serves 4. A molded ring of caviar, mayonnaise, and cream — prepared the day before.",
             "contentPath": "content/en/cold-starters/black-caviar-ring.json"
           }
         ]
@@ -338,6 +349,7 @@
             "slug": "desserts/creme/lemon-cream",
             "title": "Lemon cream",
             "scan": "originals/citroncreme.jpg",
+            "metaDescription": "A set lemon cream with wine, gelatin, and whipped cream — half tinted pink for layering.",
             "contentPath": "content/en/desserts/creme/lemon-cream.json"
           }
         ]
@@ -351,6 +363,7 @@
             "slug": "fish/fish-terrine",
             "title": "Fish terrine",
             "scan": "originals/fisketerrine.jpg",
+            "metaDescription": "A rich fish terrine with cream, broccoli, speck, and herbs.",
             "contentPath": "content/en/fish/fish-terrine.json"
           }
         ]
@@ -364,6 +377,7 @@
             "slug": "desserts/fromage/buttermilk-fromage",
             "title": "Buttermilk fromage",
             "scan": "originals/fromage-alexandra-budding.jpg",
+            "metaDescription": "A light, tangy fromage made with buttermilk and cream, set with gelatin and served with macaroons.",
             "contentPath": "content/en/desserts/fromage/buttermilk-fromage.json"
           }
         ]
@@ -377,6 +391,7 @@
             "slug": "desserts/is/parfait",
             "title": "Parfait (ice)",
             "scan": "originals/parfait-is.jpg",
+            "metaDescription": "A frozen parfait with nougat, chocolate, and liqueur.",
             "contentPath": "content/en/desserts/is/parfait.json"
           }
         ]
@@ -390,6 +405,7 @@
             "slug": "preserves/apple-raisin-chutney",
             "title": "Apple–raisin chutney",
             "scan": "originals/aeble-rosin-chutney.jpg",
+            "metaDescription": "A spiced preserve with apples, onion, and raisins.",
             "contentPath": "content/en/preserves/apple-raisin-chutney.json"
           },
           {
@@ -397,6 +413,7 @@
             "slug": "preserves/green-gooseberries",
             "title": "Green gooseberries",
             "scan": "originals/groenne-stikkelsbaer.jpg",
+            "metaDescription": "Preserved gooseberries in acidified water.",
             "contentPath": "content/en/preserves/green-gooseberries.json"
           }
         ]
@@ -410,6 +427,7 @@
             "slug": "desserts/pudding/alexandra-pudding",
             "title": "Alexandra pudding",
             "scan": "originals/fromage-alexandra-budding.jpg",
+            "metaDescription": "A delicate set pudding with fruit wine, vanilla, and lemon zest. Serve cold with cherry sauce.",
             "contentPath": "content/en/desserts/pudding/alexandra-pudding.json"
           },
           {
@@ -417,6 +435,7 @@
             "slug": "desserts/pudding/juice-pudding",
             "title": "Juice pudding",
             "scan": "originals/saft-budding.jpg",
+            "metaDescription": "A very sweet set pudding whisked for a long time.",
             "contentPath": "content/en/desserts/pudding/juice-pudding.json"
           }
         ]
@@ -430,6 +449,7 @@
             "slug": "salads/herring-salad",
             "title": "Herring salad",
             "scan": "originals/italiensk-salat-sildesalat.jpg",
+            "metaDescription": "A hearty salad of potatoes, beetroot, and apple with a sweet-sour dressing; herring optional.",
             "contentPath": "content/en/salads/herring-salad.json"
           },
           {
@@ -437,6 +457,7 @@
             "slug": "salads/italian-salad-without-oil",
             "title": "Italian salad without oil",
             "scan": "originals/italiensk-salat-sildesalat.jpg",
+            "metaDescription": "A cooked-vegetable salad bound with a glossy, egg-thickened sauce — no oil in the dressing.",
             "contentPath": "content/en/salads/italian-salad-without-oil.json"
           }
         ]
@@ -450,6 +471,7 @@
             "slug": "sauces/mushroom-sauce",
             "title": "Mushroom sauce",
             "scan": "originals/champignonsauce.jpg",
+            "metaDescription": "A quick sauce with mushrooms, red wine, and crème fraîche.",
             "contentPath": "content/en/sauces/mushroom-sauce.json"
           }
         ]
@@ -463,6 +485,7 @@
             "slug": "soups/lemon-soup",
             "title": "Lemon soup",
             "scan": "originals/citron-suppe.jpg",
+            "metaDescription": "A light lemon broth finished with egg yolks and sugar-browned bread cubes.",
             "contentPath": "content/en/soups/lemon-soup.json"
           }
         ]
@@ -481,6 +504,7 @@
             "slug": "kager/cacaokage",
             "title": "Cacaokage",
             "scan": "originals/sodakage-sirups-cacaokage.jpg",
+            "metaDescription": "En kold biscuitkage med kakao og smeltet hårdt fedt.",
             "contentPath": "content/da/kager/cacaokage.json"
           },
           {
@@ -488,6 +512,7 @@
             "slug": "kager/chokoladekage",
             "title": "Chokoladekage",
             "scan": "originals/chokoladekage-ugens-lille-laekkeri.jpg",
+            "metaDescription": "Ugens lille lækkeri — en saftig kakaoformkage; egner sig til frost.",
             "contentPath": "content/da/kager/chokoladekage.json"
           },
           {
@@ -495,6 +520,7 @@
             "slug": "kager/lagkage",
             "title": "Lagkage",
             "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
+            "metaDescription": "Klassiske lagkagebunde.",
             "contentPath": "content/da/kager/lagkage.json"
           },
           {
@@ -502,6 +528,7 @@
             "slug": "kager/luksus-appelsin-kage",
             "title": "Luksus-appelsin-kage",
             "scan": "originals/luksus-appelsin-kage.jpg",
+            "metaDescription": "En fyldig appelsinkage med chokolade og vanille.",
             "contentPath": "content/da/kager/luksus-appelsin-kage.json"
           },
           {
@@ -509,6 +536,7 @@
             "slug": "kager/marcipankage",
             "title": "Marcipankage",
             "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
+            "metaDescription": "En mandelfyldt kage med marcipansmag.",
             "contentPath": "content/da/kager/marcipankage.json"
           },
           {
@@ -516,6 +544,7 @@
             "slug": "kager/mormors-kage",
             "title": "Mormors kage",
             "scan": "originals/mormors-kage.jpg",
+            "metaDescription": "En lagkage med kakao-mandelfyld (titlen er svag i den oprindelige notesbog).",
             "contentPath": "content/da/kager/mormors-kage.json"
           },
           {
@@ -523,6 +552,7 @@
             "slug": "kager/sirups-lagkage",
             "title": "Sirups Lagkage",
             "scan": "originals/sodakage-sirups-cacaokage.jpg",
+            "metaDescription": "En siruprig lagkage fra sparsomme notes.",
             "contentPath": "content/da/kager/sirups-lagkage.json"
           },
           {
@@ -530,6 +560,7 @@
             "slug": "kager/smaa-aeggehvidekager",
             "title": "Smaa Æggehvidekager",
             "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
+            "metaDescription": "Lette, sprøde kager bagt i teskefulde.",
             "contentPath": "content/da/kager/smaa-aeggehvidekager.json"
           },
           {
@@ -537,6 +568,7 @@
             "slug": "kager/sodakage",
             "title": "Sodakage",
             "scan": "originals/sodakage-sirups-cacaokage.jpg",
+            "metaDescription": "En sodavandskage med kartoffelmel og hvedemel.",
             "contentPath": "content/da/kager/sodakage.json"
           }
         ]
@@ -550,6 +582,7 @@
             "slug": "kolde-forretter/avocadomousse-med-kaviarsovs",
             "title": "Avocadomousse med kaviarsovs",
             "scan": "originals/avocadomousse-kaviarsovs.jpg",
+            "metaDescription": "Til 4 personer. Fra et magasinklip i samlingen (som Maggio beskrev).",
             "contentPath": "content/da/kolde-forretter/avocadomousse-med-kaviarsovs.json"
           },
           {
@@ -557,6 +590,7 @@
             "slug": "kolde-forretter/sort-kaviar-rand",
             "title": "Sort Kaviar Rand",
             "scan": "originals/sort-kaviar-rand.jpg",
+            "metaDescription": "Til 4 personer. En randform med kaviar, mayonnaise og fløde — laves dagen før.",
             "contentPath": "content/da/kolde-forretter/sort-kaviar-rand.json"
           }
         ]
@@ -570,6 +604,7 @@
             "slug": "desserter/creme/citroncreme",
             "title": "Citroncrème",
             "scan": "originals/citroncreme.jpg",
+            "metaDescription": "En stivnet citroncrème med vin, husblas og flødeskum — halvdelen farvet lyserød til lag.",
             "contentPath": "content/da/desserter/creme/citroncreme.json"
           }
         ]
@@ -583,6 +618,7 @@
             "slug": "fisk/fisketerrine",
             "title": "Fisketerrine",
             "scan": "originals/fisketerrine.jpg",
+            "metaDescription": "En fyldig fisketerrine med fløde, broccoli, speck og urter.",
             "contentPath": "content/da/fisk/fisketerrine.json"
           }
         ]
@@ -596,6 +632,7 @@
             "slug": "desserter/fromage/kaernemaelks-fromage",
             "title": "Kærnemælksfromage",
             "scan": "originals/fromage-alexandra-budding.jpg",
+            "metaDescription": "En let, syrlig fromage med kærnemælk og fløde, sat med husblas og serveret med makroner.",
             "contentPath": "content/da/desserter/fromage/kaernemaelks-fromage.json"
           }
         ]
@@ -609,6 +646,7 @@
             "slug": "desserter/is/parfait-is",
             "title": "Parfait (Is)",
             "scan": "originals/parfait-is.jpg",
+            "metaDescription": "En frossen parfait med nougat, chokolade og likør.",
             "contentPath": "content/da/desserter/is/parfait-is.json"
           }
         ]
@@ -622,6 +660,7 @@
             "slug": "sylt/aeble-rosin-chutney",
             "title": "Æble-rosin-chutney",
             "scan": "originals/aeble-rosin-chutney.jpg",
+            "metaDescription": "Et krydret sylt med æbler, løg og rosiner.",
             "contentPath": "content/da/sylt/aeble-rosin-chutney.json"
           },
           {
@@ -629,6 +668,7 @@
             "slug": "sylt/groenne-stikkelsbaer",
             "title": "Grønne Stikkelsbær",
             "scan": "originals/groenne-stikkelsbaer.jpg",
+            "metaDescription": "Syltede stikkelsbær i syret vand.",
             "contentPath": "content/da/sylt/groenne-stikkelsbaer.json"
           }
         ]
@@ -642,6 +682,7 @@
             "slug": "desserter/budding/alexandra-budding",
             "title": "Alexandra budding",
             "scan": "originals/fromage-alexandra-budding.jpg",
+            "metaDescription": "En fin budding med frugtvin, vanille og citronskal. Serveres kold med kirsebærsauce.",
             "contentPath": "content/da/desserter/budding/alexandra-budding.json"
           },
           {
@@ -649,6 +690,7 @@
             "slug": "desserter/budding/saft-budding",
             "title": "Saft Budding",
             "scan": "originals/saft-budding.jpg",
+            "metaDescription": "En meget sød budding, der piskes længe.",
             "contentPath": "content/da/desserter/budding/saft-budding.json"
           }
         ]
@@ -662,6 +704,7 @@
             "slug": "salater/italiensk-salat-uden-olie",
             "title": "Italiensk Salat uden Olie",
             "scan": "originals/italiensk-salat-sildesalat.jpg",
+            "metaDescription": "Kogte grøntsager i en glansende æggefortykket sauce — uden olie i dressingen.",
             "contentPath": "content/da/salater/italiensk-salat-uden-olie.json"
           },
           {
@@ -669,6 +712,7 @@
             "slug": "salater/sildesalat",
             "title": "Sildesalat",
             "scan": "originals/italiensk-salat-sildesalat.jpg",
+            "metaDescription": "En mættende salat af kartofler, rødbeder og æbler med syrlig dressing; sild kan tilføjes.",
             "contentPath": "content/da/salater/sildesalat.json"
           }
         ]
@@ -682,6 +726,7 @@
             "slug": "saucer/champignonsauce",
             "title": "Champignonsauce",
             "scan": "originals/champignonsauce.jpg",
+            "metaDescription": "En hurtig sauce med champignon, rødvin og crème fraîche.",
             "contentPath": "content/da/saucer/champignonsauce.json"
           }
         ]
@@ -695,6 +740,7 @@
             "slug": "supper/citron-suppe",
             "title": "Citron Suppe",
             "scan": "originals/citron-suppe.jpg",
+            "metaDescription": "En let citronsuppe afsluttet med æggeblommer og sukkerbrunede brødtern.",
             "contentPath": "content/da/supper/citron-suppe.json"
           }
         ]
@@ -713,6 +759,7 @@
             "slug": "كعك/كعك-بياض-البيض-الصغير",
             "title": "كعك بياض البيض الصغير",
             "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
+            "metaDescription": "كعك خفيف مقرمش يُخبز بملاعق شاي.",
             "contentPath": "content/ar/كعك/كعك-بياض-البيض-الصغير.json"
           },
           {
@@ -720,6 +767,7 @@
             "slug": "كعك/كعكة-البرتقال-الفاخرة",
             "title": "كعكة البرتقال الفاخرة",
             "scan": "originals/luksus-appelsin-kage.jpg",
+            "metaDescription": "كعكة برتقال غنية بالشوكولاتة والفانيليا.",
             "contentPath": "content/ar/كعك/كعكة-البرتقال-الفاخرة.json"
           },
           {
@@ -727,6 +775,7 @@
             "slug": "كعك/كعكة-الشوكولاتة",
             "title": "كعكة الشوكولاتة",
             "scan": "originals/chokoladekage-ugens-lille-laekkeri.jpg",
+            "metaDescription": "حلوى الأسبوع الصغيرة — كعكة كاكاو طرية في قالب؛ تصلح للتجميد.",
             "contentPath": "content/ar/كعك/كعكة-الشوكولاتة.json"
           },
           {
@@ -734,6 +783,7 @@
             "slug": "كعك/كعكة-الصودا",
             "title": "كعكة الصودا",
             "scan": "originals/sodakage-sirups-cacaokage.jpg",
+            "metaDescription": "كعكة «صودا» بنشا البطاطس ودقيق القمح (كما في العنوان الأصلي؛ لا يظهر ماء الصودا في قائمة المكونات).",
             "contentPath": "content/ar/كعك/كعكة-الصودا.json"
           },
           {
@@ -741,6 +791,7 @@
             "slug": "كعك/كعكة-الطبقات",
             "title": "كعكة الطبقات",
             "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
+            "metaDescription": "قواعد كلاسيكية لكعكة الطبقات.",
             "contentPath": "content/ar/كعك/كعكة-الطبقات.json"
           },
           {
@@ -748,6 +799,7 @@
             "slug": "كعك/كعكة-الطبقات-بالشراب",
             "title": "كعكة الطبقات بالشراب",
             "scan": "originals/sodakage-sirups-cacaokage.jpg",
+            "metaDescription": "كعكة طبقات غنية بالشراب من ملاحظات مقتضبة.",
             "contentPath": "content/ar/كعك/كعكة-الطبقات-بالشراب.json"
           },
           {
@@ -755,6 +807,7 @@
             "slug": "كعك/كعكة-الكاكاو",
             "title": "كعكة الكاكاو",
             "scan": "originals/sodakage-sirups-cacaokage.jpg",
+            "metaDescription": "كعكة بسكويت باردة بالكاكاو ودهن صلب مذاب.",
             "contentPath": "content/ar/كعك/كعكة-الكاكاو.json"
           },
           {
@@ -762,6 +815,7 @@
             "slug": "كعك/كعكة-المارتسيبان",
             "title": "كعكة المارتسيبان",
             "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
+            "metaDescription": "كعكة محشوة باللوز بطعم المارتسيبان.",
             "contentPath": "content/ar/كعك/كعكة-المارتسيبان.json"
           },
           {
@@ -769,6 +823,7 @@
             "slug": "كعك/كعكة-مورمور",
             "title": "كعكة مورمور",
             "scan": "originals/mormors-kage.jpg",
+            "metaDescription": "كعكة طبقات بحشوة الكاكاو واللوز (العنوان باهت في دفتر الملاحظات الأصلي).",
             "contentPath": "content/ar/كعك/كعكة-مورمور.json"
           }
         ]
@@ -782,6 +837,7 @@
             "slug": "مقبلات-باردة/قالب-الكافيار-الأسود",
             "title": "قالب الكافيار الأسود",
             "scan": "originals/sort-kaviar-rand.jpg",
+            "metaDescription": "لأربع أشخاص. قالب حلقي بالكافيار والمايونيز والكريمة — يُحضَّر في اليوم السابق.",
             "contentPath": "content/ar/مقبلات-باردة/قالب-الكافيار-الأسود.json"
           },
           {
@@ -789,6 +845,7 @@
             "slug": "مقبلات-باردة/موس-الأفوكادو-بصلصة-الكافيار",
             "title": "موس الأفوكادو بصلصة الكافيار",
             "scan": "originals/avocadomousse-kaviarsovs.jpg",
+            "metaDescription": "لأربع أشخاص. من قصاصة مجلة في المجموعة.",
             "contentPath": "content/ar/مقبلات-باردة/موس-الأفوكادو-بصلصة-الكافيار.json"
           }
         ]
@@ -802,6 +859,7 @@
             "slug": "حلويات/كريمة/كريمة-الليمون",
             "title": "كريمة الليمون",
             "scan": "originals/citroncreme.jpg",
+            "metaDescription": "كريمة ليمون متماسكة بالنبيذ وأوراق الجيلاتين وكريمة مخفوقة — يُلوَّن نصفها ورديًا للطبقات.",
             "contentPath": "content/ar/حلويات/كريمة/كريمة-الليمون.json"
           }
         ]
@@ -815,6 +873,7 @@
             "slug": "سمك/تيرين-السمك",
             "title": "تيرين السمك",
             "scan": "originals/fisketerrine.jpg",
+            "metaDescription": "تيرين سمك غني بالكريمة والبروكلي والسبك والأعشاب.",
             "contentPath": "content/ar/سمك/تيرين-السمك.json"
           }
         ]
@@ -828,6 +887,7 @@
             "slug": "حلويات/فورماج/فورماج-اللبن-المخاض",
             "title": "فورماج اللبن المخاض",
             "scan": "originals/fromage-alexandra-budding.jpg",
+            "metaDescription": "فورماج خفيف حامض بلَبن مخاض وكريمة، يُثبَّت بأوراق جيلاتين ويُقدَّم مع الماكرون.",
             "contentPath": "content/ar/حلويات/فورماج/فورماج-اللبن-المخاض.json"
           }
         ]
@@ -841,6 +901,7 @@
             "slug": "حلويات/آيس-كريم/بارفيه",
             "title": "بارفيه (آيس كريم)",
             "scan": "originals/parfait-is.jpg",
+            "metaDescription": "بارفيه مجمّد بالنوجا والشوكولاتة والليكور.",
             "contentPath": "content/ar/حلويات/آيس-كريم/بارفيه.json"
           }
         ]
@@ -854,6 +915,7 @@
             "slug": "معلبات/تشاتني-التفاح-والزبيب",
             "title": "تشاتني التفاح والزبيب",
             "scan": "originals/aeble-rosin-chutney.jpg",
+            "metaDescription": "مخلل متبّل بالتفاح والبصل والزبيب.",
             "contentPath": "content/ar/معلبات/تشاتني-التفاح-والزبيب.json"
           },
           {
@@ -861,6 +923,7 @@
             "slug": "معلبات/عنب-الثعلب-الأخضر",
             "title": "عنب الثعلب الأخضر",
             "scan": "originals/groenne-stikkelsbaer.jpg",
+            "metaDescription": "عنب ثعلب مخلل في ماء حامض.",
             "contentPath": "content/ar/معلبات/عنب-الثعلب-الأخضر.json"
           }
         ]
@@ -874,6 +937,7 @@
             "slug": "حلويات/بودنغ/بودنغ-ألكسندرا",
             "title": "بودنغ ألكسندرا",
             "scan": "originals/fromage-alexandra-budding.jpg",
+            "metaDescription": "بودنغ أنيق بنبيذ الفاكهة والفانيليا وقشر الليمون. يُقدَّم باردًا مع صلصة الكرز.",
             "contentPath": "content/ar/حلويات/بودنغ/بودنغ-ألكسندرا.json"
           },
           {
@@ -881,6 +945,7 @@
             "slug": "حلويات/بودنغ/بودنغ-العصير",
             "title": "بودنغ العصير",
             "scan": "originals/saft-budding.jpg",
+            "metaDescription": "بودنغ حلو جدًا يُخفق طويلًا.",
             "contentPath": "content/ar/حلويات/بودنغ/بودنغ-العصير.json"
           }
         ]
@@ -894,6 +959,7 @@
             "slug": "سلطات/سلطة-إيطالية-بلا-زيت",
             "title": "سلطة إيطالية بلا زيت",
             "scan": "originals/italiensk-salat-sildesalat.jpg",
+            "metaDescription": "خضار مطبوخة في صلصة لامعة مُثخَّنة بالبيض — بلا زيت في التتبيلة.",
             "contentPath": "content/ar/سلطات/سلطة-إيطالية-بلا-زيت.json"
           },
           {
@@ -901,6 +967,7 @@
             "slug": "سلطات/سلطة-الرنجة",
             "title": "سلطة الرنجة",
             "scan": "originals/italiensk-salat-sildesalat.jpg",
+            "metaDescription": "سلطة مشبعة من البطاطس والشمندر والتفاح مع تتبيلة حامضة؛ يمكن إضافة الرنجة.",
             "contentPath": "content/ar/سلطات/سلطة-الرنجة.json"
           }
         ]
@@ -914,6 +981,7 @@
             "slug": "صلصات/صلصة-الفطر",
             "title": "صلصة الفطر",
             "scan": "originals/champignonsauce.jpg",
+            "metaDescription": "صلصة سريعة بالفطر والنبيذ الأحمر والكريم فريش.",
             "contentPath": "content/ar/صلصات/صلصة-الفطر.json"
           }
         ]
@@ -927,6 +995,7 @@
             "slug": "شوربات/شوربة-الليمون",
             "title": "شوربة الليمون",
             "scan": "originals/citron-suppe.jpg",
+            "metaDescription": "شوربة ليمون خفيفة تُختَم بصفار البيض ومكعبات خبز محمّرة بالسكر.",
             "contentPath": "content/ar/شوربات/شوربة-الليمون.json"
           }
         ]
