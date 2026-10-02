@@ -81,6 +81,10 @@ async function main() {
   });
   applyChrome("recipes");
 
+  const arNativeBody =
+    lang === "ar" && entry.contentPath?.startsWith("content/ar/");
+  const showArFallback = lang === "ar" && !arNativeBody;
+
   let data;
   try {
     const res = await fetch(entry.contentPath);
@@ -91,6 +95,9 @@ async function main() {
     return;
   }
 
+  const bodyLang = showArFallback ? "da" : lang;
+  const scanLang = showArFallback ? "da" : lang;
+
   const catLabel = categoryLabel(lang, data.categoryKey);
   setDocumentMeta({
     title: `${data.title}${t(lang, "metaRecipeSuffix")}`,
@@ -98,19 +105,27 @@ async function main() {
   });
 
   const scanBlock = renderScanBlock(
-    lang,
+    scanLang,
     index,
     data.scan,
     data.recipeId,
     data.title
   );
 
+  const fallbackBlock = showArFallback
+    ? `<aside class="ar-fallback" role="note">
+        <p class="ar-fallback__label">${escapeHtml(t(lang, "arFallbackLabel"))}</p>
+        <p class="ar-fallback__notice">${escapeHtml(t(lang, "arFallbackNotice"))}</p>
+      </aside>`
+    : "";
+
   article.innerHTML = `
     <article class="recipe-article">
-      <h1>${escapeHtml(data.title)}</h1>
+      <h1 class="recipe-title-ltr" dir="ltr">${escapeHtml(data.title)}</h1>
       <p class="recipe-meta">${escapeHtml(catLabel)}</p>
+      ${fallbackBlock}
       <div class="recipe-layout">
-        <div class="recipe-body">${localizeHeadings(data.html, lang)}</div>
+        <div class="recipe-body" dir="${showArFallback ? "ltr" : "auto"}">${localizeHeadings(data.html, lang, bodyLang)}</div>
         <aside class="recipe-scan" aria-labelledby="scan-heading">
           <h2 id="scan-heading" class="recipe-scan__title">${escapeHtml(t(lang, "scanHeading"))}</h2>
           ${scanBlock}
@@ -126,10 +141,11 @@ async function main() {
 }
 
 function findEntry(index, lang, recipeId, slugParam) {
-  const tree = index[lang];
+  const tree = index[lang] ?? (lang === "ar" ? index.da : null);
   if (!tree?.groups) return null;
 
-  const aliases = index.slugAliases?.[lang] ?? {};
+  const aliasLang = lang === "ar" ? "da" : lang;
+  const aliases = index.slugAliases?.[aliasLang] ?? {};
 
   if (recipeId) {
     for (const g of tree.groups) {
@@ -158,8 +174,9 @@ function findByFullSlug(tree, fullSlug) {
 
 function siblingTitlesOnScan(index, lang, scan, recipeId) {
   if (!scan) return [];
+  const treeLang = lang === "ar" ? "da" : lang;
   const titles = [];
-  for (const g of index[lang]?.groups ?? []) {
+  for (const g of index[treeLang]?.groups ?? []) {
     for (const r of g.recipes ?? []) {
       if (r.scan === scan && r.recipeId !== recipeId) {
         titles.push(r.title);
@@ -225,11 +242,11 @@ function renderScanBlock(lang, index, scan, recipeId, title) {
   `;
 }
 
-function localizeHeadings(html, lang) {
-  const map = HEADING_MAP[lang] ?? HEADING_MAP.en;
+function localizeHeadings(html, displayLang, bodyLang = displayLang) {
+  const map = HEADING_MAP[bodyLang] ?? HEADING_MAP.da;
   return html.replace(/<h2>([^<]+)<\/h2>/gi, (_, text) => {
     const key = map[text.trim()];
-    const label = key ? t(lang, key) : text.trim();
+    const label = key ? t(displayLang, key) : text.trim();
     return `<h2>${escapeHtml(label)}</h2>`;
   });
 }

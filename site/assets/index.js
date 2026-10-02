@@ -1,4 +1,4 @@
-import { applyChrome, setDocumentMeta, categoryLabel, t } from "./site.js";
+import { applyChrome, setDocumentMeta, categoryLabel, t, withLang } from "./site.js";
 
 async function main() {
   const lang = applyChrome("home");
@@ -20,7 +20,7 @@ async function main() {
     return;
   }
 
-  const tree = index[lang];
+  const tree = index[lang] ?? index.da;
   if (!tree?.groups?.length) {
     container.innerHTML = emptyBlock(lang);
     return;
@@ -32,8 +32,11 @@ async function main() {
     const heading = categoryLabel(lang, group.categoryKey);
     const items = group.recipes
       .map((r) => {
-        const href = `recipe?lang=${encodeURIComponent(lang)}&id=${encodeURIComponent(r.recipeId)}`;
-        return `<li><a href="${href}">${escapeHtml(r.title)}</a></li>`;
+        const href = withLang(
+          `/recipe?id=${encodeURIComponent(r.recipeId)}`,
+          lang
+        );
+        return `<li><a class="recipe-list__title" href="${escapeHtml(href)}">${escapeHtml(r.title)}</a></li>`;
       })
       .join("");
     parts.push(

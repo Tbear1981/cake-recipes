@@ -629,5 +629,237 @@
         ]
       }
     ]
+  },
+  "ar": {
+    "lang": "da",
+    "groups": [
+      {
+        "id": "cakes",
+        "categoryKey": "categoryCakes",
+        "recipes": [
+          {
+            "recipeId": "cocoa-cake",
+            "slug": "kager/cacaokage",
+            "title": "Cacaokage",
+            "scan": "originals/sodakage-sirups-cacaokage.jpg",
+            "contentPath": "content/da/kager/cacaokage.json"
+          },
+          {
+            "recipeId": "chokoladekage",
+            "slug": "kager/chokoladekage",
+            "title": "Chokoladekage",
+            "scan": "originals/chokoladekage-ugens-lille-laekkeri.jpg",
+            "contentPath": "content/da/kager/chokoladekage.json"
+          },
+          {
+            "recipeId": "layer-cake",
+            "slug": "kager/lagkage",
+            "title": "Lagkage",
+            "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
+            "contentPath": "content/da/kager/lagkage.json"
+          },
+          {
+            "recipeId": "luksus-appelsin-kage",
+            "slug": "kager/luksus-appelsin-kage",
+            "title": "Luksus-appelsin-kage",
+            "scan": "originals/luksus-appelsin-kage.jpg",
+            "contentPath": "content/da/kager/luksus-appelsin-kage.json"
+          },
+          {
+            "recipeId": "marzipan-cake",
+            "slug": "kager/marcipankage",
+            "title": "Marcipankage",
+            "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
+            "contentPath": "content/da/kager/marcipankage.json"
+          },
+          {
+            "recipeId": "mormors-cake",
+            "slug": "kager/mormors-kage",
+            "title": "Mormors kage",
+            "scan": "originals/mormors-kage.jpg",
+            "contentPath": "content/da/kager/mormors-kage.json"
+          },
+          {
+            "recipeId": "syrup-layer-cake",
+            "slug": "kager/sirups-lagkage",
+            "title": "Sirups Lagkage",
+            "scan": "originals/sodakage-sirups-cacaokage.jpg",
+            "contentPath": "content/da/kager/sirups-lagkage.json"
+          },
+          {
+            "recipeId": "small-egg-white-cookies",
+            "slug": "kager/smaa-aeggehvidekager",
+            "title": "Smaa Æggehvidekager",
+            "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
+            "contentPath": "content/da/kager/smaa-aeggehvidekager.json"
+          },
+          {
+            "recipeId": "soda-cake",
+            "slug": "kager/sodakage",
+            "title": "Sodakage",
+            "scan": "originals/sodakage-sirups-cacaokage.jpg",
+            "contentPath": "content/da/kager/sodakage.json"
+          }
+        ]
+      },
+      {
+        "id": "cold-starters",
+        "categoryKey": "categoryColdStarters",
+        "recipes": [
+          {
+            "recipeId": "avocado-mousse-with-caviar-sauce",
+            "slug": "kolde-forretter/avocadomousse-med-kaviarsovs",
+            "title": "Avocadomousse med kaviarsovs",
+            "scan": "originals/avocadomousse-kaviarsovs.jpg",
+            "contentPath": "content/da/kolde-forretter/avocadomousse-med-kaviarsovs.json"
+          },
+          {
+            "recipeId": "black-caviar-ring",
+            "slug": "kolde-forretter/sort-kaviar-rand",
+            "title": "Sort Kaviar Rand",
+            "scan": "originals/sort-kaviar-rand.jpg",
+            "contentPath": "content/da/kolde-forretter/sort-kaviar-rand.json"
+          }
+        ]
+      },
+      {
+        "id": "creme",
+        "categoryKey": "categoryCreme",
+        "recipes": [
+          {
+            "recipeId": "lemon-cream",
+            "slug": "desserter/creme/citroncreme",
+            "title": "Citroncrème",
+            "scan": "originals/citroncreme.jpg",
+            "contentPath": "content/da/desserter/creme/citroncreme.json"
+          }
+        ]
+      },
+      {
+        "id": "fish",
+        "categoryKey": "categoryFish",
+        "recipes": [
+          {
+            "recipeId": "fish-terrine",
+            "slug": "fisk/fisketerrine",
+            "title": "Fisketerrine",
+            "scan": "originals/fisketerrine.jpg",
+            "contentPath": "content/da/fisk/fisketerrine.json"
+          }
+        ]
+      },
+      {
+        "id": "fromage",
+        "categoryKey": "categoryFromage",
+        "recipes": [
+          {
+            "recipeId": "buttermilk-fromage",
+            "slug": "desserter/fromage/kaernemaelks-fromage",
+            "title": "Kærnemælksfromage",
+            "scan": "originals/fromage-alexandra-budding.jpg",
+            "contentPath": "content/da/desserter/fromage/kaernemaelks-fromage.json"
+          }
+        ]
+      },
+      {
+        "id": "is",
+        "categoryKey": "categoryIs",
+        "recipes": [
+          {
+            "recipeId": "parfait",
+            "slug": "desserter/is/parfait-is",
+            "title": "Parfait (Is)",
+            "scan": "originals/parfait-is.jpg",
+            "contentPath": "content/da/desserter/is/parfait-is.json"
+          }
+        ]
+      },
+      {
+        "id": "preserves",
+        "categoryKey": "categoryPreserves",
+        "recipes": [
+          {
+            "recipeId": "apple-raisin-chutney",
+            "slug": "sylt/aeble-rosin-chutney",
+            "title": "Æble-rosin-chutney",
+            "scan": "originals/aeble-rosin-chutney.jpg",
+            "contentPath": "content/da/sylt/aeble-rosin-chutney.json"
+          },
+          {
+            "recipeId": "green-gooseberries",
+            "slug": "sylt/groenne-stikkelsbaer",
+            "title": "Grønne Stikkelsbær",
+            "scan": "originals/groenne-stikkelsbaer.jpg",
+            "contentPath": "content/da/sylt/groenne-stikkelsbaer.json"
+          }
+        ]
+      },
+      {
+        "id": "pudding",
+        "categoryKey": "categoryPudding",
+        "recipes": [
+          {
+            "recipeId": "alexandra-pudding",
+            "slug": "desserter/budding/alexandra-budding",
+            "title": "Alexandra budding",
+            "scan": "originals/fromage-alexandra-budding.jpg",
+            "contentPath": "content/da/desserter/budding/alexandra-budding.json"
+          },
+          {
+            "recipeId": "juice-pudding",
+            "slug": "desserter/budding/saft-budding",
+            "title": "Saft Budding",
+            "scan": "originals/saft-budding.jpg",
+            "contentPath": "content/da/desserter/budding/saft-budding.json"
+          }
+        ]
+      },
+      {
+        "id": "salads",
+        "categoryKey": "categorySalads",
+        "recipes": [
+          {
+            "recipeId": "italian-salad-without-oil",
+            "slug": "salater/italiensk-salat-uden-olie",
+            "title": "Italiensk Salat uden Olie",
+            "scan": "originals/italiensk-salat-sildesalat.jpg",
+            "contentPath": "content/da/salater/italiensk-salat-uden-olie.json"
+          },
+          {
+            "recipeId": "herring-salad",
+            "slug": "salater/sildesalat",
+            "title": "Sildesalat",
+            "scan": "originals/italiensk-salat-sildesalat.jpg",
+            "contentPath": "content/da/salater/sildesalat.json"
+          }
+        ]
+      },
+      {
+        "id": "sauces",
+        "categoryKey": "categorySauces",
+        "recipes": [
+          {
+            "recipeId": "mushroom-sauce",
+            "slug": "saucer/champignonsauce",
+            "title": "Champignonsauce",
+            "scan": "originals/champignonsauce.jpg",
+            "contentPath": "content/da/saucer/champignonsauce.json"
+          }
+        ]
+      },
+      {
+        "id": "soups",
+        "categoryKey": "categorySoups",
+        "recipes": [
+          {
+            "recipeId": "lemon-soup",
+            "slug": "supper/citron-suppe",
+            "title": "Citron Suppe",
+            "scan": "originals/citron-suppe.jpg",
+            "contentPath": "content/da/supper/citron-suppe.json"
+          }
+        ]
+      }
+    ]
   }
 }

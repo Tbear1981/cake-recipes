@@ -1,13 +1,50 @@
+import { BASE_PATH } from "./config.js";
 import {
   STRINGS,
-  t,
+  t as tBase,
   getLang,
   setLang,
-  withLang,
 } from "./i18n.js";
 
 /** @type {{ recipeId?: string; recipePairs?: Record<string, { en: string; da: string }> } | null} */
 let langSwitchContext = null;
+
+const SITE_ROOT = normalizeBasePath(BASE_PATH);
+
+function normalizeBasePath(bp) {
+  if (!bp || bp === "/") return "";
+  let s = String(bp).trim();
+  if (!s.startsWith("/")) s = `/${s}`;
+  return s.replace(/\/$/, "");
+}
+
+/** Prefix absolute site paths with BASE_PATH (standalone: unchanged). */
+export function sitePath(href) {
+  if (/^https?:\/\//i.test(href)) return href;
+
+  const hashIdx = href.indexOf("#");
+  const hash = hashIdx >= 0 ? href.slice(hashIdx) : "";
+  let rest = hashIdx >= 0 ? href.slice(0, hashIdx) : href;
+  const qIdx = rest.indexOf("?");
+  const query = qIdx >= 0 ? rest.slice(qIdx) : "";
+  let pathname = qIdx >= 0 ? rest.slice(0, qIdx) : rest;
+
+  if (pathname.startsWith("/")) {
+    pathname = SITE_ROOT + pathname;
+  }
+
+  return pathname + query + hash;
+}
+
+export function withLang(href, lang) {
+  const url = new URL(sitePath(href), window.location.origin);
+  url.searchParams.set("lang", lang);
+  return url.pathname + url.search + url.hash;
+}
+
+export function t(lang, key) {
+  return tBase(lang, key);
+}
 
 export function setLangSwitchContext(ctx) {
   langSwitchContext = ctx;
@@ -16,7 +53,12 @@ export function setLangSwitchContext(ctx) {
 export function applyChrome(activeNav) {
   const lang = getLang();
   setLang(lang);
-  document.documentElement.lang = lang === "da" ? "da" : "en";
+  document.documentElement.lang = lang;
+  if (lang === "ar") {
+    document.documentElement.setAttribute("dir", "rtl");
+  } else {
+    document.documentElement.removeAttribute("dir");
+  }
 
   const titleEl = document.querySelector("[data-site-title]");
   const taglineEl = document.querySelector("[data-tagline]");
@@ -28,6 +70,7 @@ export function applyChrome(activeNav) {
   const recipesHeading = document.getElementById("recipes-heading");
   const langDa = document.querySelector("[data-lang-da]");
   const langEn = document.querySelector("[data-lang-en]");
+  const langAr = document.querySelector("[data-lang-ar]");
   const langSwitch = document.querySelector(".lang-switch");
 
   if (titleEl) titleEl.textContent = t(lang, "siteTitle");
@@ -75,6 +118,11 @@ export function applyChrome(activeNav) {
     langEn.href = switchLangHref("en");
     langEn.setAttribute("aria-current", lang === "en" ? "true" : "false");
   }
+  if (langAr) {
+    langAr.textContent = t(lang, "langAr");
+    langAr.href = switchLangHref("ar");
+    langAr.setAttribute("aria-current", lang === "ar" ? "true" : "false");
+  }
   if (langSwitch) {
     langSwitch.setAttribute("aria-label", t(lang, "langSwitchAria"));
   }
@@ -102,11 +150,13 @@ function switchLangHref(targetLang) {
 
 function resolveSlugToRecipeId(slug, lang) {
   if (!slug || !langSwitchContext?.slugAliases) return null;
-  const aliases = langSwitchContext.slugAliases[lang];
+  const aliasLang = lang === "ar" ? "da" : lang;
+  const aliases = langSwitchContext.slugAliases[aliasLang];
   if (!aliases) return null;
   const full = aliases[slug] ?? slug;
+  const pairLang = lang === "ar" ? "da" : lang;
   for (const [id, paths] of Object.entries(langSwitchContext.recipePairs ?? {})) {
-    if (paths[lang] === full) return id;
+    if (paths[pairLang] === full) return id;
   }
   return null;
 }
@@ -126,4 +176,4 @@ export function categoryLabel(lang, categoryKey) {
   return t(lang, categoryKey);
 }
 
-export { t, getLang, withLang, STRINGS };
+export { getLang, STRINGS, SITE_ROOT };

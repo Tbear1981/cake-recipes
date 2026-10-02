@@ -10,7 +10,11 @@ export const STRINGS = {
     navAria: "Hovedmenu",
     langDa: "Dansk",
     langEn: "Engelsk",
+    langAr: "Arabisk",
     langSwitchAria: "Skift sprog",
+    arFallbackNotice:
+      "Denne opskrift vises på dansk, indtil der findes en arabisk oversættelse. Den danske tekst er originalen fra Lises mormors notesbog.",
+    arFallbackLabel: "Arabisk kommer snart — dansk tekst nedenfor",
     categoryDesserts: "Desserter",
     categoryFromage: "Fromage",
     categoryPudding: "Budding",
@@ -69,7 +73,11 @@ export const STRINGS = {
     navAria: "Main",
     langDa: "Danish",
     langEn: "English",
+    langAr: "Arabic",
     langSwitchAria: "Change language",
+    arFallbackNotice:
+      "This recipe is shown in Danish until an Arabic translation is available. The Danish text is the original from Lise’s mormor’s notebook.",
+    arFallbackLabel: "Arabic coming soon — Danish text below",
     categoryDesserts: "Desserts",
     categoryFromage: "Fromage",
     categoryPudding: "Pudding",
@@ -118,21 +126,91 @@ export const STRINGS = {
       "Handwritten recipes from Lise’s mormor — desserts and more.",
     metaRecipeSuffix: " — Lise’s mormor’s recipes",
   },
+  ar: {
+    siteTitle: "وصفات مورمور ليزه",
+    tagline: "وصفات مكتوبة بخط اليد من مورمور ليزه",
+    sourceLine: "المصدر: مورمور ليزه",
+    navRecipes: "الوصفات",
+    navHome: "الرئيسية",
+    navAbout: "عن الوصفات",
+    navAria: "القائمة الرئيسية",
+    langDa: "الدنماركية",
+    langEn: "الإنجليزية",
+    langAr: "العربية",
+    langSwitchAria: "تغيير اللغة",
+    categoryDesserts: "حلويات",
+    categoryFromage: "فورماج",
+    categoryPudding: "بودنغ",
+    categoryCreme: "كريمة",
+    categoryIs: "آيس كريم",
+    categorySalads: "سلطات",
+    categoryCakes: "كعك",
+    categorySoups: "شوربات",
+    categoryFish: "سمك",
+    categorySauces: "صلصات",
+    categoryColdStarters: "مقبلات باردة",
+    categoryPreserves: "معلّبات",
+    categoryArchive: "أرشيف",
+    scanHeading: "خط اليد",
+    scanDisclosure: "عرض خط اليد",
+    scanPlaceholder: "ستأتي الصورة قريبًا",
+    aboutTitle: "عن الوصفات",
+    aboutMetaDescription:
+      "قصة وصفات مورمور ليزه المكتوبة بخط اليد — دفتر ملاحظات وقصاصات، والصفحة الأصلية بجانب النص المكتوب.",
+    aboutBody:
+      "مورمور ليزه كانت تكتب الوصفات بخط اليد: في دفتر ملاحظات، وعلى قصاصات ورق، وفي قصاصات من صحف ومجلات. بعض الأسطر واضحة، وبعضها صُحّح أثناء الكتابة — تمامًا كما ينمو دفتر المطبخ مع السنين.\n\nهنا تقع الوصفة المكتوبة بجانب الصفحة الأصلية. ليس لاستبدال خطّها، بل ليبقى مرئيًا وأنتم تطبخون. هذه كلماتها وطريقتها في التذكّر — جعلناها فقط أسهل للقراءة على طاولة المطبخ.",
+    aboutBookDisclosure: "عرض غلاف الدفتر",
+    aboutCoverCaption: "غلاف دفتر الملاحظات.",
+    aboutCoverScanAlt: "غلاف كتاب وصفات مورمور ليزه",
+    aboutLedgerTitle: "بقشيش (دريكبنغه)",
+    aboutLedgerBridge:
+      "في الدفاتر نفسها صفحات ليست وصفات. «دريكبنغه» صفحة منزلية لتسجيل البقشيش — جزء من الأرشيف، وليست وصفة للطبخ.",
+    aboutLedgerDisclosure: "عرض صفحة البقشيش",
+    aboutLedgerCaption: "صفحة منزلية — ليست وصفة.",
+    aboutLedgerScanAlt: "صفحة بقشيش مكتوبة بخط اليد، نوفمبر–فبراير",
+    aboutBackToRecipes: "العودة إلى الوصفات",
+    ingredientsHeading: "المكونات",
+    methodHeading: "الطريقة",
+    notesHeading: "ملاحظات",
+    transcriptionNoteHeading: "ملاحظة التفريغ",
+    backToList: "العودة إلى الوصفات",
+    emptyTitle: "لا وصفات بعد",
+    emptyBody: "ستظهر المزيد عندما نضيفها.",
+    notFoundTitle: "الوصفة غير موجودة",
+    notFoundBody: "جرّب الصفحة الرئيسية، أو اختر وصفة أخرى.",
+    notFoundMissingBody: "اختر وصفة من الصفحة الرئيسية.",
+    notFoundIndexBody:
+      "تعذّر تحميل قائمة الوصفات. شغّل `npx serve site` من جذر المشروع (وليس file://).",
+    footerNote: "من دفاتر مورمور ليزه المكتوبة بخط اليد.",
+    metaHomeDescription: "وصفات مكتوبة بخط اليد من مورمور ليزه — حلويات والمزيد.",
+    metaRecipeSuffix: " — وصفات مورمور ليزه",
+    arFallbackNotice:
+      "هذه الوصفة معروضة بالدنماركية إلى أن تتوفر ترجمة عربية. النص الدنماركي هو الأصل من دفتر مورمور ليزه.",
+    arFallbackLabel: "بالعربية قريبًا — النص الدنماركي أدناه",
+  },
 };
 
-export const LANGS = ["da", "en"];
+export const LANGS = ["da", "en", "ar"];
 
 export function t(lang, key) {
-  const L = STRINGS[lang] ?? STRINGS.en;
-  return L[key] ?? key;
+  if (LANGS.includes(lang) && STRINGS[lang]?.[key] !== undefined) {
+    return STRINGS[lang][key];
+  }
+  if (lang === "ar") {
+    if (STRINGS.da[key] !== undefined) return STRINGS.da[key];
+    if (STRINGS.en[key] !== undefined) return STRINGS.en[key];
+    return key;
+  }
+  const L = STRINGS[lang] ?? STRINGS.da;
+  return L[key] ?? STRINGS.da[key] ?? STRINGS.en[key] ?? key;
 }
 
 export function getLang() {
   const params = new URLSearchParams(window.location.search);
   const q = params.get("lang");
-  if (q === "da" || q === "en") return q;
+  if (q === "da" || q === "en" || q === "ar") return q;
   const stored = localStorage.getItem("recipe-lang");
-  if (stored === "da" || stored === "en") return stored;
+  if (stored === "da" || stored === "en" || stored === "ar") return stored;
   return "da";
 }
 
@@ -144,6 +222,7 @@ export function otherLang(lang) {
   return lang === "da" ? "en" : "da";
 }
 
+/** @deprecated Use sitePath + withLang from site.js for basePath-aware URLs. */
 export function withLang(href, lang) {
   const url = new URL(href, window.location.origin);
   url.searchParams.set("lang", lang);
