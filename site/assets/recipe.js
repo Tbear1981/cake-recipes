@@ -1,5 +1,7 @@
 import {
+  aiBylineChipHtml,
   applyChrome,
+  recipeAttributionHtml,
   setDocumentMeta,
   categoryLabel,
   getLang,
@@ -160,6 +162,7 @@ async function main() {
   article.innerHTML = `
     <article class="recipe-article">
       <h1${titleAttrs}>${escapeHtml(data.title)}</h1>
+      ${aiBylineChipHtml(lang)}
       <p class="recipe-meta">${escapeHtml(catLabel)}</p>
       ${fallbackBlock}
       <div class="recipe-layout">
@@ -169,6 +172,7 @@ async function main() {
           ${scanBlock}
         </aside>
       </div>
+      ${recipeAttributionHtml(lang)}
     </article>
   `;
 

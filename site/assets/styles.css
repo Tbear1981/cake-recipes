@@ -387,6 +387,75 @@ html[dir="rtl"] .contribute-strip__mailto {
   font-family: var(--font-ui);
 }
 
+.ai-byline {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-ui);
+}
+
+.ai-byline__chip {
+  display: inline-block;
+  padding: 0.22rem 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  line-height: 1.35;
+  color: var(--ink-muted);
+  background: var(--paper-elevated);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.45) inset;
+}
+
+.ai-byline__chip--compact {
+  font-size: 0.68rem;
+  padding: 0.15rem 0.45rem;
+  margin-top: 0.35rem;
+}
+
+.recipe-card__ai {
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.recipe-card__ai .ai-byline__chip--compact {
+  margin-top: 0;
+}
+
+.recipe-attribution {
+  margin-top: 2rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--border-light);
+  max-width: var(--max);
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  line-height: 1.55;
+}
+
+.recipe-source-line {
+  margin: 0 0 0.65rem;
+  font-weight: 600;
+  color: var(--accent-soft);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+.opskrifter-ai-note {
+  margin: 0;
+}
+
+.about-ai-note {
+  margin: 1.25rem 0 0;
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  line-height: 1.55;
+}
+
+.about-ai-note .opskrifter-ai-note {
+  margin: 0;
+}
+
 .back-link {
   display: inline-flex;
   align-items: center;
@@ -562,7 +631,11 @@ html[dir="rtl"] .contribute-strip__mailto {
 
 .about-story h1 {
   font-size: 1.85rem;
-  margin: 0 0 1rem;
+  margin: 0 0 0.35rem;
+}
+
+.about-story .ai-byline {
+  margin-bottom: 1rem;
 }
 
 .about-body p {

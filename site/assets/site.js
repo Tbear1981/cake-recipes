@@ -174,4 +174,34 @@ export function categoryLabel(lang, categoryKey) {
   return t(lang, categoryKey);
 }
 
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+/** Editor-approved AI disclosure chip (recipe/about: full label; cards: short). */
+export function aiBylineChipHtml(lang, { short = false, inline = false } = {}) {
+  const key = short ? "opskrifterAiBylineShort" : "opskrifterAiByline";
+  const text = t(lang, key);
+  const aria = t(lang, "opskrifterAiBylineAria");
+  const compact = short ? " ai-byline__chip--compact" : "";
+  const chip = `<span class="ai-byline__chip${compact}" aria-label="${escapeHtml(aria)}">${escapeHtml(text)}</span>`;
+  if (inline) return chip;
+  return `<p class="ai-byline" role="note">${chip}</p>`;
+}
+
+export function opskrifterAiNoteHtml(lang) {
+  return `<p class="opskrifter-ai-note" role="note">${escapeHtml(t(lang, "opskrifterAiNote"))}</p>`;
+}
+
+export function recipeAttributionHtml(lang) {
+  return `<footer class="recipe-attribution">
+    <p class="recipe-source-line">${escapeHtml(t(lang, "sourceLine"))}</p>
+    ${opskrifterAiNoteHtml(lang)}
+  </footer>`;
+}
+
 export { getLang, STRINGS, SITE_ROOT };

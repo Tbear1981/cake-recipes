@@ -4,6 +4,12 @@ export const STRINGS = {
     siteTitle: "Lises mormors opskrifter",
     tagline: "Håndskrevne opskrifter fra Lises mormor",
     sourceLine: "Kilde: Lises mormor",
+    opskrifterAiByline: "AI-skrevet/oversat · beta",
+    opskrifterAiBylineShort: "AI-tekst · beta",
+    opskrifterAiBylineAria:
+      "Denne tekst er skrevet eller oversat med kunstig intelligens",
+    opskrifterAiNote:
+      "AI-skrevet eller AI-oversat tekst (beta). Kilden er Lises mormors håndskrevne notesbog — originalerne er menneskelige. Den renskrevne og oversatte tekst er lavet med kunstig intelligens og erstatter ikke håndskriften. Se kilden og scanningerne, hvor de findes.",
     navRecipes: "Opskrifter",
     navHome: "Forside",
     navAbout: "Om",
@@ -72,6 +78,12 @@ export const STRINGS = {
     siteTitle: "Lise’s mormor’s recipes",
     tagline: "Handwritten recipes from Lise’s mormor",
     sourceLine: "Source: Lise’s mormor",
+    opskrifterAiByline: "AI-written/translated · beta",
+    opskrifterAiBylineShort: "AI text · beta",
+    opskrifterAiBylineAria:
+      "This text was written or translated with artificial intelligence",
+    opskrifterAiNote:
+      "AI-written or AI-translated text (beta). The source is Lise’s mormor’s handwritten notebook — the originals are human. Typed and translated text is made with artificial intelligence and does not replace the handwriting. Follow the source line and scans where available.",
     navRecipes: "Recipes",
     navHome: "Home",
     navAbout: "About",
@@ -140,6 +152,11 @@ export const STRINGS = {
     siteTitle: "وصفات مورمور ليزه",
     tagline: "وصفات مكتوبة بخط اليد من مورمور ليزه",
     sourceLine: "المصدر: مورمور ليزه",
+    opskrifterAiByline: "كتابة/ترجمة بالذكاء الاصطناعي · تجريبي",
+    opskrifterAiBylineShort: "نص بالذكاء الاصطناعي · تجريبي",
+    opskrifterAiBylineAria: "كُتب هذا النص أو تُرجم بالذكاء الاصطناعي",
+    opskrifterAiNote:
+      "نص مكتوب أو مترجم بالذكاء الاصطناعي (تجريبي). المصدر دفتر مورمور ليزه المكتوب بخط اليد — الأصول بشرية. النص المكتوب والمترجم مُعدّ بالذكاء الاصطناعي ولا يحلّ محلّ خط اليد. راجع سطر المصدر والمسح الضوئي حيث يتوفر.",
     navRecipes: "الوصفات",
     navHome: "الرئيسية",
     navAbout: "عن الوصفات",

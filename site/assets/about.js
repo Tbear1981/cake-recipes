@@ -1,4 +1,11 @@
-import { applyChrome, setDocumentMeta, t, withLang } from "./site.js";
+import {
+  aiBylineChipHtml,
+  applyChrome,
+  opskrifterAiNoteHtml,
+  setDocumentMeta,
+  t,
+  withLang,
+} from "./site.js";
 
 const ABOUT_COVER_SCAN = "originals/bog-forside.jpg";
 const ABOUT_LEDGER_SCAN = "originals/drikkepenge-nov-feb.jpg";
@@ -14,9 +21,26 @@ function main() {
 
   const titleEl = document.getElementById("about-title");
   const bodyEl = document.getElementById("about-body");
-  if (titleEl) titleEl.textContent = t(lang, "aboutTitle");
+  if (titleEl) {
+    titleEl.textContent = t(lang, "aboutTitle");
+    let bylineMount = document.getElementById("about-ai-byline");
+    if (!bylineMount) {
+      bylineMount = document.createElement("div");
+      bylineMount.id = "about-ai-byline";
+      titleEl.insertAdjacentElement("afterend", bylineMount);
+    }
+    bylineMount.innerHTML = aiBylineChipHtml(lang);
+  }
   if (bodyEl) {
     bodyEl.innerHTML = paragraphsHtml(lang, "aboutBody");
+    let noteMount = document.getElementById("about-ai-note");
+    if (!noteMount) {
+      noteMount = document.createElement("div");
+      noteMount.id = "about-ai-note";
+      noteMount.className = "about-ai-note";
+      bodyEl.insertAdjacentElement("afterend", noteMount);
+    }
+    noteMount.innerHTML = opskrifterAiNoteHtml(lang);
   }
 
   const coverMount = document.getElementById("about-cover-mount");

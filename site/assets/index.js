@@ -1,4 +1,11 @@
-import { applyChrome, setDocumentMeta, categoryLabel, t, withLang } from "./site.js";
+import {
+  aiBylineChipHtml,
+  applyChrome,
+  setDocumentMeta,
+  categoryLabel,
+  t,
+  withLang,
+} from "./site.js";
 
 const CONTRIBUTE_MAIL = "tbj@bona.city";
 
@@ -99,6 +106,7 @@ function renderRecipeCard(lang, index, r) {
       <span class="recipe-card__thumb-wrap">${thumbInner}</span>
       <span class="recipe-card__body">
         <span class="recipe-card__title">${title}</span>
+        <span class="recipe-card__ai" role="note">${aiBylineChipHtml(lang, { short: true, inline: true })}</span>
         ${lede ? `<span class="recipe-card__lede">${lede}</span>` : ""}
         ${shared}
       </span>
