@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <title>Om opskrifterne</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="brand">
+          <p class="brand__title">
+            <a href="index.html"><span data-site-title></span></a>
+          </p>
+          <p class="brand__tagline" data-tagline></p>
+        </div>
+        <nav>
+          <ul>
+            <li><a data-nav-home href="index.html"></a></li>
+            <li><a data-nav-recipes href="index.html#recipes"></a></li>
+            <li><a data-nav-about href="about.html"></a></li>
+            <li>
+              <div class="lang-switch" role="group">
+                <a data-lang-da href="about.html?lang=da"></a>
+                <a data-lang-en href="about.html?lang=en"></a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="main-inner">
+        <article class="about-page">
+          <h1 id="about-title"></h1>
+          <div id="about-body" class="about-body"></div>
+        </article>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <p data-footer-note></p>
+    </footer>
+    <script type="module" src="assets/about.js"></script>
+  </body>
+</html>

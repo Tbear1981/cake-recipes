@@ -3,9 +3,15 @@ import {
   t,
   getLang,
   setLang,
-  otherLang,
   withLang,
 } from "./i18n.js";
+
+/** @type {{ recipeId?: string; recipePairs?: Record<string, { en: string; da: string }> } | null} */
+let langSwitchContext = null;
+
+export function setLangSwitchContext(ctx) {
+  langSwitchContext = ctx;
+}
 
 export function applyChrome(activeNav) {
   const lang = getLang();
@@ -14,17 +20,18 @@ export function applyChrome(activeNav) {
 
   const titleEl = document.querySelector("[data-site-title]");
   const taglineEl = document.querySelector("[data-tagline]");
-  const sourceEl = document.querySelector("[data-source]");
   const footerNoteEl = document.querySelector("[data-footer-note]");
   const navHome = document.querySelector("[data-nav-home]");
   const navRecipes = document.querySelector("[data-nav-recipes]");
+  const navAbout = document.querySelector("[data-nav-about]");
+  const mainNav = document.querySelector(".site-header nav");
+  const recipesHeading = document.getElementById("recipes-heading");
   const langDa = document.querySelector("[data-lang-da]");
   const langEn = document.querySelector("[data-lang-en]");
   const langSwitch = document.querySelector(".lang-switch");
 
   if (titleEl) titleEl.textContent = t(lang, "siteTitle");
   if (taglineEl) taglineEl.textContent = t(lang, "tagline");
-  if (sourceEl) sourceEl.textContent = t(lang, "sourceLine");
   if (footerNoteEl) footerNoteEl.textContent = t(lang, "footerNote");
 
   const brandLink = document.querySelector(".brand__title a");
@@ -42,6 +49,20 @@ export function applyChrome(activeNav) {
       "aria-current",
       activeNav === "recipes" ? "page" : "false"
     );
+  }
+  if (navAbout) {
+    navAbout.textContent = t(lang, "navAbout");
+    navAbout.href = withLang("/about.html", lang);
+    navAbout.setAttribute(
+      "aria-current",
+      activeNav === "about" ? "page" : "false"
+    );
+  }
+  if (mainNav) {
+    mainNav.setAttribute("aria-label", t(lang, "navAria"));
+  }
+  if (recipesHeading) {
+    recipesHeading.textContent = t(lang, "navRecipes");
   }
 
   if (langDa) {
@@ -64,7 +85,30 @@ export function applyChrome(activeNav) {
 function switchLangHref(targetLang) {
   const url = new URL(window.location.href);
   url.searchParams.set("lang", targetLang);
+
+  const recipeId =
+    url.searchParams.get("id") ||
+    langSwitchContext?.recipeId ||
+    resolveSlugToRecipeId(url.searchParams.get("slug"), getLang());
+
+  if (recipeId && langSwitchContext?.recipePairs?.[recipeId]) {
+    url.searchParams.set("id", recipeId);
+    url.searchParams.delete("slug");
+    return url.pathname + url.search + url.hash;
+  }
+
   return url.pathname + url.search + url.hash;
+}
+
+function resolveSlugToRecipeId(slug, lang) {
+  if (!slug || !langSwitchContext?.slugAliases) return null;
+  const aliases = langSwitchContext.slugAliases[lang];
+  if (!aliases) return null;
+  const full = aliases[slug] ?? slug;
+  for (const [id, paths] of Object.entries(langSwitchContext.recipePairs ?? {})) {
+    if (paths[lang] === full) return id;
+  }
+  return null;
 }
 
 export function setDocumentMeta({ title, description }) {

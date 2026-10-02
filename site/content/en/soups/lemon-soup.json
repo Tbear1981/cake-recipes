@@ -1,0 +1,10 @@
+{
+  "recipeId": "lemon-soup",
+  "slug": "soups/lemon-soup",
+  "title": "Lemon soup",
+  "categoryId": "soups",
+  "categoryKey": "categorySoups",
+  "scan": "originals/citron-suppe.jpg",
+  "html": "<p>A light lemon broth finished with egg yolks and sugar-browned bread cubes.</p>\n<h2>Ingredients</h2>\n<ul>\n<li>1 l water</li>\n<li>Lemon peel</li>\n<li>20 g potato starch (to thicken)</li>\n<li>2 egg yolks</li>\n<li>1–2 tbsp sugar</li>\n<li>Lemon juice</li>\n<li>Bread cubes, browned in sugar</li>\n</ul>\n<h2>Method</h2>\n<ol>\n<li>Simmer water with lemon peel. Thicken with potato starch slurry.</li>\n<li>Off the heat, finish with egg yolks beaten with sugar (liaison); add lemon juice to taste.</li>\n<li>Serve with sugar-browned bread cubes.</li>\n</ol>\n",
+  "metaDescription": "A light lemon broth finished with egg yolks and sugar-browned bread cubes."
+}

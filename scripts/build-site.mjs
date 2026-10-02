@@ -1,11 +1,20 @@
 import fs from "fs";
 import path from "path";
 import { marked } from "marked";
+import {
+  buildFileToId,
+  buildRecipePairs,
+  SCAN_BY_ID,
+} from "./recipe-ids.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const RECIPES = path.join(ROOT, "recipes");
 const SITE = path.join(ROOT, "site");
 const CONTENT = path.join(SITE, "content");
+const ORIGINALS_SRC = path.join(ROOT, "originals");
+const ORIGINALS_DST = path.join(SITE, "originals");
+
+const FILE_TO_ID = buildFileToId();
 
 /** @type {Record<string, string>} */
 const DISPLAY_TITLES = {
@@ -16,12 +25,58 @@ const DISPLAY_TITLES = {
 };
 
 /** @type {Record<string, { id: string; categoryKey: string }>} */
-const CATEGORY_MAP = {
-  "desserts/fromage": { id: "fromage", categoryKey: "categoryFromage" },
-  "desserts/pudding": { id: "pudding", categoryKey: "categoryPudding" },
-  "desserter/fromage": { id: "fromage", categoryKey: "categoryFromage" },
-  "desserter/budding": { id: "budding", categoryKey: "categoryPudding" },
+const TOP_CATEGORY = {
+  en: {
+    salads: { id: "salads", categoryKey: "categorySalads" },
+    cakes: { id: "cakes", categoryKey: "categoryCakes" },
+    soups: { id: "soups", categoryKey: "categorySoups" },
+    fish: { id: "fish", categoryKey: "categoryFish" },
+    sauces: { id: "sauces", categoryKey: "categorySauces" },
+    "cold-starters": { id: "cold-starters", categoryKey: "categoryColdStarters" },
+    preserves: { id: "preserves", categoryKey: "categoryPreserves" },
+    archive: { id: "archive", categoryKey: "categoryArchive" },
+  },
+  da: {
+    salater: { id: "salads", categoryKey: "categorySalads" },
+    kager: { id: "cakes", categoryKey: "categoryCakes" },
+    supper: { id: "soups", categoryKey: "categorySoups" },
+    fisk: { id: "fish", categoryKey: "categoryFish" },
+    saucer: { id: "sauces", categoryKey: "categorySauces" },
+    "kolde-forretter": { id: "cold-starters", categoryKey: "categoryColdStarters" },
+    sylt: { id: "preserves", categoryKey: "categoryPreserves" },
+    historie: { id: "archive", categoryKey: "categoryArchive" },
+  },
 };
+
+/** @type {Record<string, Record<string, { id: string; categoryKey: string }>>} */
+const DESSERT_SUB = {
+  en: {
+    fromage: { id: "fromage", categoryKey: "categoryFromage" },
+    pudding: { id: "pudding", categoryKey: "categoryPudding" },
+    creme: { id: "creme", categoryKey: "categoryCreme" },
+    is: { id: "is", categoryKey: "categoryIs" },
+  },
+  da: {
+    fromage: { id: "fromage", categoryKey: "categoryFromage" },
+    budding: { id: "pudding", categoryKey: "categoryPudding" },
+    creme: { id: "creme", categoryKey: "categoryCreme" },
+    is: { id: "is", categoryKey: "categoryIs" },
+  },
+};
+
+function resolveCategory(lang, categoryPath) {
+  const parts = categoryPath.split("/");
+  if (parts.length === 2) {
+    const [top, sub] = parts;
+    if ((top === "desserts" || top === "desserter") && DESSERT_SUB[lang]?.[sub]) {
+      return DESSERT_SUB[lang][sub];
+    }
+  }
+  if (parts.length === 1) {
+    return TOP_CATEGORY[lang]?.[parts[0]] ?? null;
+  }
+  return null;
+}
 
 function walkMd(dir, base = "") {
   /** @type {string[]} */
@@ -58,6 +113,36 @@ function stripLeadingH1(html) {
   return html.replace(/^\s*<h1[^>]*>[\s\S]*?<\/h1>\s*/i, "");
 }
 
+function scanForSite(recipeId) {
+  const repoPath = SCAN_BY_ID[recipeId];
+  if (!repoPath) return null;
+  return repoPath.replace(/^originals\//, "originals/");
+}
+
+function copyOriginals() {
+  fs.mkdirSync(ORIGINALS_DST, { recursive: true });
+  if (!fs.existsSync(ORIGINALS_SRC)) return;
+  for (const name of fs.readdirSync(ORIGINALS_SRC)) {
+    if (!name.toLowerCase().endsWith(".jpg")) continue;
+    fs.copyFileSync(path.join(ORIGINALS_SRC, name), path.join(ORIGINALS_DST, name));
+  }
+}
+
+function buildSlugAliases() {
+  /** @type {Record<string, Record<string, string>>} */
+  const aliases = { en: {}, da: {} };
+  const pairs = buildRecipePairs();
+  for (const [recipeId, slugs] of Object.entries(pairs)) {
+    aliases.en[recipeId] = slugs.en;
+    aliases.da[recipeId] = slugs.da;
+    const enBase = slugs.en.split("/").pop();
+    const daBase = slugs.da.split("/").pop();
+    if (enBase) aliases.en[enBase] = slugs.en;
+    if (daBase) aliases.da[daBase] = slugs.da;
+  }
+  return aliases;
+}
+
 function buildLang(lang) {
   const langDir = path.join(RECIPES, lang);
   const files = walkMd(langDir);
@@ -68,15 +153,21 @@ function buildLang(lang) {
     const fullPath = path.join(langDir, relFile);
     const md = fs.readFileSync(fullPath, "utf8");
     const key = `${lang}/${relFile}`;
+    const recipeId = FILE_TO_ID[key];
+    if (!recipeId) {
+      console.warn(`Skip unmapped file (add to recipe-ids.mjs): ${key}`);
+      continue;
+    }
     const displayTitle = DISPLAY_TITLES[key] ?? parseTitleFromMd(md);
     const parts = relFile.split("/");
     const categoryPath = parts.slice(0, -1).join("/");
-    const cat = CATEGORY_MAP[categoryPath];
+    const cat = resolveCategory(lang, categoryPath);
     if (!cat) {
       console.warn(`Skip unknown category path: ${lang}/${categoryPath}`);
       continue;
     }
     const slug = relFile.replace(/\.md$/, "");
+    const scan = scanForSite(recipeId);
     const htmlBody = stripLeadingH1(marked.parse(md));
     const outRel = path.join(lang, slug + ".json");
     const outPath = path.join(CONTENT, outRel);
@@ -85,10 +176,12 @@ function buildLang(lang) {
       outPath,
       JSON.stringify(
         {
+          recipeId,
           slug,
           title: displayTitle,
           categoryId: cat.id,
           categoryKey: cat.categoryKey,
+          scan,
           html: htmlBody,
           metaDescription: excerptFromMd(md),
         },
@@ -101,8 +194,10 @@ function buildLang(lang) {
       groups.set(cat.id, { categoryKey: cat.categoryKey, recipes: [] });
     }
     groups.get(cat.id).recipes.push({
+      recipeId,
       slug,
       title: displayTitle,
+      scan,
       contentPath: `content/${outRel.replace(/\\/g, "/")}`,
     });
   }
@@ -119,12 +214,17 @@ function buildLang(lang) {
 }
 
 fs.mkdirSync(CONTENT, { recursive: true });
+copyOriginals();
+
 const index = {
+  recipePairs: buildRecipePairs(),
+  slugAliases: buildSlugAliases(),
   en: buildLang("en"),
   da: buildLang("da"),
 };
+
 fs.writeFileSync(
   path.join(SITE, "recipes-index.json"),
   JSON.stringify(index, null, 2)
 );
-console.log("Wrote site/recipes-index.json and content/*.json");
+console.log("Wrote site/recipes-index.json, content/*.json, and site/originals/*.jpg");

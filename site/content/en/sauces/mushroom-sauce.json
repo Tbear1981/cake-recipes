@@ -1,0 +1,10 @@
+{
+  "recipeId": "mushroom-sauce",
+  "slug": "sauces/mushroom-sauce",
+  "title": "Mushroom sauce",
+  "categoryId": "sauces",
+  "categoryKey": "categorySauces",
+  "scan": "originals/champignonsauce.jpg",
+  "html": "<p>A quick sauce with mushrooms, red wine, and crème fraîche.</p>\n<h2>Ingredients</h2>\n<ul>\n<li>250 g mushrooms</li>\n<li>1 dl red wine</li>\n<li>½ dl crème fraîche</li>\n<li>Salt and pepper</li>\n<li>15 g butter</li>\n</ul>\n<h2>Method</h2>\n<p>[method missing]</p>\n",
+  "metaDescription": "A quick sauce with mushrooms, red wine, and crème fraîche."
+}

@@ -1,0 +1,10 @@
+{
+  "recipeId": "layer-cake",
+  "slug": "cakes/layer-cake",
+  "title": "Layer cake",
+  "categoryId": "cakes",
+  "categoryKey": "categoryCakes",
+  "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
+  "html": "<p>A classic Danish sponge layer cake base (<em>lagkagebunde</em>).</p>\n<p><em>Note: In these notebooks, 1 pd (pund) ≈ 500 g.</em></p>\n<h2>Ingredients</h2>\n<ul>\n<li>½ pd butter</li>\n<li>½ pd sugar</li>\n<li>4 eggs, added one at a time</li>\n<li>½ pd flour</li>\n<li>1 tsp baking powder</li>\n</ul>\n<h2>Method</h2>\n<ol>\n<li>Cream butter and sugar until light.</li>\n<li>Beat in the eggs one at a time.</li>\n<li>Sift flour with baking powder and fold in.</li>\n<li>Bake in layer-cake tins until done (time not given in the original note).</li>\n</ol>\n",
+  "metaDescription": "A classic Danish sponge layer cake base (lagkagebunde)."
+}

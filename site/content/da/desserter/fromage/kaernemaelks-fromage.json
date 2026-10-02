@@ -1,8 +1,10 @@
 {
+  "recipeId": "buttermilk-fromage",
   "slug": "desserter/fromage/kaernemaelks-fromage",
   "title": "Kærnemælksfromage",
   "categoryId": "fromage",
   "categoryKey": "categoryFromage",
+  "scan": "originals/fromage-alexandra-budding.jpg",
   "html": "<p>En let, syrlig fromage med kærnemælk og fløde, sat med husblas og serveret med makroner.</p>\n<h2>Ingredienser</h2>\n<ul>\n<li>½ l kærnemælk</li>\n<li>1 dl fløde</li>\n<li>4 blade husblas</li>\n<li>Makroner (til servering og evt. i formen)</li>\n<li>Sukker efter smag</li>\n</ul>\n<h2>Fremgangsmåde</h2>\n<ol>\n<li>Læg husbladene i koldt vand, til de er bløde. Klem overskydende vand ud.</li>\n<li>Varm en smule af fløden (den må ikke koge) og opløs den blødgjorte husblas i den.</li>\n<li>Bland kærnemælk og resten af fløden. Tilsæt sukker efter smag.</li>\n<li>Rør den opløste husblas i, til det er jævnt fordelt.</li>\n<li>Hæld i en skål eller form. Brug makroner som bund eller lag, hvis du vil.</li>\n<li>Sæt på køl, til fromagen er stivnet. Server kold med makroner.</li>\n</ol>\n",
   "metaDescription": "En let, syrlig fromage med kærnemælk og fløde, sat med husblas og serveret med makroner."
 }

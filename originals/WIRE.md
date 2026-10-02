@@ -1,0 +1,19 @@
+Wire scan on each recipe/archive to originals/<file> (shared scans OK for multi-recipe pages):
+- buttermilk-fromage + alexandra-pudding → fromage-alexandra-budding.jpg
+- italiensk-salat + sildesalat → italiensk-salat-sildesalat.jpg
+- aeggehvidekager + lagkage + marcipankage → aeggehvidekager-lagkage-marcipankage.jpg
+- citron-suppe → citron-suppe.jpg
+- citroncreme → citroncreme.jpg
+- fisketerrine → fisketerrine.jpg
+- champignonsauce → champignonsauce.jpg
+- sort-kaviar-rand → sort-kaviar-rand.jpg
+- avocadomousse → avocadomousse-kaviarsovs.jpg
+- saft-budding → saft-budding.jpg
+- aeble-rosin-chutney → aeble-rosin-chutney.jpg
+- mormors-kage → mormors-kage.jpg
+- parfait-is → parfait-is.jpg
+- groenne-stikkelsbaer → groenne-stikkelsbaer.jpg
+- sodakage + sirups-lagkage + cacaokage → sodakage-sirups-cacaokage.jpg
+- drikkepenge → drikkepenge-nov-feb.jpg
+- luksus-appelsin-kage → luksus-appelsin-kage.jpg
+- chokoladekage → chokoladekage-ugens-lille-laekkeri.jpg

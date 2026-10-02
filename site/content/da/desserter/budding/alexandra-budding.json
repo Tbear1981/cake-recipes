@@ -1,8 +1,10 @@
 {
+  "recipeId": "alexandra-pudding",
   "slug": "desserter/budding/alexandra-budding",
   "title": "Alexandra budding",
-  "categoryId": "budding",
+  "categoryId": "pudding",
   "categoryKey": "categoryPudding",
+  "scan": "originals/fromage-alexandra-budding.jpg",
   "html": "<p>En fin budding med frugtvin, vanille og citronskal. Serveres kold med kirsebærsauce.</p>\n<h2>Ingredienser</h2>\n<ul>\n<li>2 æg, delt i hvide og blommer</li>\n<li>125 g sukker</li>\n<li>Vanille</li>\n<li>½ l sød mælk</li>\n<li>1 dl frugtvin</li>\n<li>Lidt reven citronskal</li>\n<li>8 blade husblas</li>\n</ul>\n<h2>Fremgangsmåde</h2>\n<ol>\n<li>Læg husbladene i koldt vand, til de er bløde. Klem overskydende vand ud.</li>\n<li>Pisk æggeblommer og sukker lyse og tykke.</li>\n<li>Varm mælk med frugtvin, vanille og citronskal (den må ikke koge). Opløs den blødgjorte husblas i den varme blanding.</li>\n<li>Rør den varme blanding lidt efter lidt i æggeblomme- og sukkerblandingen.</li>\n<li>Pisk æggehviderne stive. Vend dem forsigtigt i cremen.</li>\n<li>Hæld buddingen i en skål og sæt på køl, til den er stivnet.</li>\n<li>Server kold med kirsebærsauce.</li>\n</ol>\n",
   "metaDescription": "En fin budding med frugtvin, vanille og citronskal. Serveres kold med kirsebærsauce."
 }

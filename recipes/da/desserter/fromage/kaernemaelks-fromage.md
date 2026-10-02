@@ -1,4 +1,4 @@
-# Kærnemælks fromage
+# Kærnemælksfromage
 
 En let, syrlig fromage med kærnemælk og fløde, sat med husblas og serveret med makroner.
 

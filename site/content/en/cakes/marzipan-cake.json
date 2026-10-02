@@ -1,0 +1,10 @@
+{
+  "recipeId": "marzipan-cake",
+  "slug": "cakes/marzipan-cake",
+  "title": "Marzipan cake",
+  "categoryId": "cakes",
+  "categoryKey": "categoryCakes",
+  "scan": "originals/aeggehvidekager-lagkage-marcipankage.jpg",
+  "html": "<p>A rich almond cake with marzipan flavour.</p>\n<p><em>Note: In these notebooks, 1 pd (pund) ≈ 500 g.</em></p>\n<h2>Ingredients</h2>\n<ul>\n<li>½ pd butter</li>\n<li>1 pd flour</li>\n<li>½ pd sugar</li>\n<li>4 eggs</li>\n<li>1 tsp baking powder</li>\n<li>Almond essence</li>\n</ul>\n<h2>Method</h2>\n<ol>\n<li>Cream butter and sugar; beat in the eggs.</li>\n<li>Fold in flour, baking powder, and almond essence.</li>\n<li>Bake until done (time and temperature not given in the original note).</li>\n</ol>\n",
+  "metaDescription": "A rich almond cake with marzipan flavour."
+}

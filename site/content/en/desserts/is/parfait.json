@@ -1,0 +1,10 @@
+{
+  "recipeId": "parfait",
+  "slug": "desserts/is/parfait",
+  "title": "Parfait (ice)",
+  "categoryId": "is",
+  "categoryKey": "categoryIs",
+  "scan": "originals/parfait-is.jpg",
+  "html": "<p>A frozen parfait with nougat, chocolate, and liqueur.</p>\n<h2>Ingredients</h2>\n<ul>\n<li>6 egg yolks</li>\n<li>125 g icing sugar</li>\n<li>1 l whipped cream</li>\n<li>Crushed nougat</li>\n<li>Grated chocolate</li>\n<li>Liqueur to taste</li>\n</ul>\n<h2>Method</h2>\n<ol>\n<li>Whisk yolks with icing sugar until light.</li>\n<li>Fold in whipped cream, nougat, chocolate, and liqueur.</li>\n<li>Freeze until firm (timing not given in the original note).</li>\n</ol>\n",
+  "metaDescription": "A frozen parfait with nougat, chocolate, and liqueur."
+}

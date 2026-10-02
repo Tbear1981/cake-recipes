@@ -1,46 +1,53 @@
 # Lise’s Mormor’s Recipes / Lises mormors opskrifter
 
-**English** — Handwritten recipes from **Lise’s mormor** (grandmother), transcribed in Markdown. Recipes are grouped by category; each language has its own tree with parallel folders.
+**English** — Handwritten recipes from **Lise’s mormor** (grandmother), transcribed in Markdown. Each language has its own tree; the static site shows the typed recipe beside a scan of the original page when available.
 
 **Source:** Lise’s mormor
 
-**Dansk** — Håndskrevne opskrifter fra **Lises mormor**, gengivet i Markdown. Opskrifterne er grupperet efter kategori; hvert sprog har sin egen mappe med tilsvarende undermapper.
+**Dansk** — Håndskrevne opskrifter fra **Lises mormor**, gengivet i Markdown. Hvert sprog har sin egen mappe; sitet viser den indtastede opskrift ved siden af scanningen, når den findes.
 
 **Kilde:** Lises mormor
 
 ## Folder layout
 
-Parallel language trees: top level is `en/` and `da/`, then category groups with English names under `en/` and Danish names under `da/`.
-
 ```
 recipes/
-  en/
-    desserts/
-      fromage/
-      pudding/
-  da/
-    desserter/
-      fromage/
-      budding/
+  en/                          da/
+    salads/                      salater/
+    cakes/                       kager/
+    soups/                       supper/
+    fish/                        fisk/
+    sauces/                      saucer/
+    cold-starters/               kolde-forretter/
+    preserves/                     sylt/
+    archive/                       historie/
+    desserts/                      desserter/
+      fromage/                     fromage/
+      pudding/                     budding/
+      creme/                       creme/
+      is/                          is/
+originals/          # scans (see originals/WIRE.md)
+site/               # static preview + generated content/
 ```
 
 | English (`recipes/en/`) | Danish (`recipes/da/`) |
 |-------------------------|-------------------------|
-| `desserts/fromage/`     | `desserter/fromage/`    |
-| `desserts/pudding/`     | `desserter/budding/`    |
+| `salads/` | `salater/` |
+| `cakes/` | `kager/` |
+| `soups/` | `supper/` |
+| `fish/` | `fisk/` |
+| `sauces/` | `saucer/` |
+| `cold-starters/` | `kolde-forretter/` |
+| `preserves/` | `sylt/` |
+| `archive/` | `historie/` |
+| `desserts/fromage/` | `desserter/fromage/` |
+| `desserts/pudding/` | `desserter/budding/` |
+| `desserts/creme/` | `desserter/creme/` |
+| `desserts/is/` | `desserter/is/` |
 
-## Recipes
-
-| English | Danish |
-|---------|--------|
-| [Buttermilk fromage](recipes/en/desserts/fromage/buttermilk-fromage.md) | [Kærnemælks fromage](recipes/da/desserter/fromage/kaernemaelks-fromage.md) |
-| [Alexandra pudding](recipes/en/desserts/pudding/alexandra-pudding.md) | [Alexandra budding](recipes/da/desserter/budding/alexandra-budding.md) |
+Cross-language links use stable `recipeId` values in `scripts/recipe-ids.mjs`. Scan paths follow `originals/WIRE.md`.
 
 ## Local preview site
-
-Static preview under `site/`. Recipe content is generated from the Markdown tree into `site/recipes-index.json` and `site/content/`.
-
-From the repository root:
 
 ```bash
 npm install
@@ -48,16 +55,9 @@ npm run build
 npx serve site
 ```
 
-Or with Python:
+Use `?lang=da` or `?lang=en` (or the header toggle). Recipe URLs use `recipe.html?lang=da&id=<recipeId>`.
 
-```bash
-npm run build
-python3 -m http.server 8080 --directory site
-```
-
-Open **http://127.0.0.1:3000** when using `npx serve site` (default port), or **http://127.0.0.1:8080** with the Python command above. Use `?lang=da` or `?lang=en` (or the header toggle) to switch language.
-
-Regenerate after editing recipe Markdown:
+Regenerate after editing Markdown or scans:
 
 ```bash
 npm run build

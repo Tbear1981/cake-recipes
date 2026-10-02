@@ -1,0 +1,10 @@
+{
+  "recipeId": "soda-cake",
+  "slug": "cakes/soda-cake",
+  "title": "Soda cake",
+  "categoryId": "cakes",
+  "categoryKey": "categoryCakes",
+  "scan": "originals/sodakage-sirups-cacaokage.jpg",
+  "html": "<p>A sponge cake with potato starch and wheat flour.</p>\n<h2>Ingredients</h2>\n<ul>\n<li>75 g butter</li>\n<li>75 g sugar</li>\n<li>150 g potato starch</li>\n<li>150 g wheat flour</li>\n<li>Baking powder (quantity unclear in the original note)</li>\n<li>1½ dl milk</li>\n<li>3 eggs</li>\n<li>Spices to taste</li>\n</ul>\n<h2>Method</h2>\n<ol>\n<li>Cream butter and sugar.</li>\n<li>Mix flours with baking powder; beat in eggs.</li>\n<li>Add milk last and spices.</li>\n<li>Bake about 50 minutes (temperature not given in the original note).</li>\n</ol>\n",
+  "metaDescription": "A sponge cake with potato starch and wheat flour."
+}

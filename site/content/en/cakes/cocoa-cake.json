@@ -1,0 +1,10 @@
+{
+  "recipeId": "cocoa-cake",
+  "slug": "cakes/cocoa-cake",
+  "title": "Cocoa cake",
+  "categoryId": "cakes",
+  "categoryKey": "categoryCakes",
+  "scan": "originals/sodakage-sirups-cacaokage.jpg",
+  "html": "<p>A cold biscuit cake set with cocoa and melted shortening.</p>\n<h2>Ingredients</h2>\n<ul>\n<li>2 eggs</li>\n<li>4 tbsp caster sugar</li>\n<li>4 tbsp cocoa</li>\n<li>4 tbsp milk</li>\n<li>½ pack melted Palmin (or similar hard fat)</li>\n<li>½ pack biscuits</li>\n</ul>\n<h2>Method</h2>\n<ol>\n<li>Beat eggs with sugar; stir in cocoa and milk, then the melted fat.</li>\n<li>Line a tin with paper; layer biscuits with the cocoa mixture.</li>\n<li>Chill until set (timing not given in the original note).</li>\n</ol>\n",
+  "metaDescription": "A cold biscuit cake set with cocoa and melted shortening."
+}
